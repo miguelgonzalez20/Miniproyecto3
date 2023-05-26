@@ -30,7 +30,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         BotonUsuario = new javax.swing.JButton();
         BotonPrestamo = new javax.swing.JButton();
-        Fondo = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,8 +42,10 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         BotonPrestamo.setText("PRESTAMO");
         jPanel1.add(BotonPrestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 180, 60));
 
-        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Miguel\\Desktop\\Univalle\\FondoLibros.jpg")); // NOI18N
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 350));
+        jLabel2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setText("         LIBRERIA UNIVALLE ");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 350, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +103,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonPrestamo;
     private javax.swing.JButton BotonUsuario;
-    private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
