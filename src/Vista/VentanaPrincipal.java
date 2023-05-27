@@ -31,21 +31,35 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         BotonUsuario = new javax.swing.JButton();
         BotonPrestamo = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonUsuario.setText("USUARIO");
+        BotonUsuario.setText("OPCIONES DE USUARIO");
+        BotonUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonUsuarioActionPerformed(evt);
+            }
+        });
         jPanel1.add(BotonUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 180, 60));
 
-        BotonPrestamo.setText("PRESTAMO");
-        jPanel1.add(BotonPrestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 200, 180, 60));
+        BotonPrestamo.setText("OPCIONES DE RECURSO");
+        BotonPrestamo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonPrestamoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonPrestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 170, 180, 60));
 
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("         LIBRERIA UNIVALLE ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 350, 50));
+
+        jButton1.setText("PRESTAMO");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 140, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -64,6 +78,21 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BotonUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonUsuarioActionPerformed
+        // TODO add your handling code here:
+        
+        VentanaUsuarios usuario1 = new VentanaUsuarios();
+        
+        usuario1.setVisible(true);
+        usuario1.setLocationRelativeTo(null);
+        this.dispose();//para que no se acumulen las ventanas 
+   
+    }//GEN-LAST:event_BotonUsuarioActionPerformed
+
+    private void BotonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPrestamoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonPrestamoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,6 +132,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonPrestamo;
     private javax.swing.JButton BotonUsuario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

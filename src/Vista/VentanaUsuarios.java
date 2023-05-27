@@ -32,8 +32,9 @@ public class VentanaUsuarios extends javax.swing.JFrame {
         BotonAgregar = new javax.swing.JButton();
         BotonActualizar = new javax.swing.JButton();
         BotonEliminar = new javax.swing.JButton();
-        BotonListar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
+        BotonListar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,14 +42,24 @@ public class VentanaUsuarios extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("USUARIO");
+        jLabel1.setText("opciones de usuario");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, 400, 60));
 
         BotonAgregar.setText("AGREGAR");
+        BotonAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAgregarActionPerformed(evt);
+            }
+        });
         jPanel1.add(BotonAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 150, 70));
 
         BotonActualizar.setText("ACTUALIZAR");
+        BotonActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonActualizarActionPerformed(evt);
+            }
+        });
         jPanel1.add(BotonActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 150, 70));
 
         BotonEliminar.setText("ELIMINAR");
@@ -59,11 +70,22 @@ public class VentanaUsuarios extends javax.swing.JFrame {
         });
         jPanel1.add(BotonEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 150, 70));
 
-        BotonListar.setText("LISTAR");
-        jPanel1.add(BotonListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 150, 70));
+        jButton1.setText("VOLVER A MENU PRINCIPAL");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
+        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -100, 550, 450));
 
-        Fondo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Miguel\\Desktop\\Univalle\\FondoLibros.jpg")); // NOI18N
-        jPanel1.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 350));
+        BotonListar.setText("LISTAR");
+        BotonListar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonListarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonListar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, 150, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,7 +107,43 @@ public class VentanaUsuarios extends javax.swing.JFrame {
 
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
         // TODO add your handling code here:
+         ActualizarUsuario principa61 = new ActualizarUsuario();
+        this.dispose();
+        principa61.setVisible(true);
+        principa61.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_BotonEliminarActionPerformed
+
+    private void BotonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonListarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonListarActionPerformed
+
+    private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed
+        // TODO add your handling code here:
+        ActualizarUsuario principa51 = new ActualizarUsuario();
+        this.dispose();
+        principa51.setVisible(true);
+        principa51.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_BotonActualizarActionPerformed
+
+    private void BotonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarActionPerformed
+        // TODO add your handling code here:
+        AgregarUsuario principa41 = new AgregarUsuario();
+        
+        principa41.setVisible(true);
+        principa41.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_BotonAgregarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        VentanaPrincipal principal12 = new VentanaPrincipal();
+        
+        principal12.setVisible(true);
+        principal12.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,6 +186,7 @@ public class VentanaUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton BotonEliminar;
     private javax.swing.JButton BotonListar;
     private javax.swing.JLabel Fondo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
