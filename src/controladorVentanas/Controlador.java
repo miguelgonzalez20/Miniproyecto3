@@ -1,7 +1,6 @@
 
-package Controlador;
-
-import Modelo.modelo;
+package controladorVentanas;
+import modelo.usuario;
 import Vista.ActualizarUsuario;
 import Vista.AgregarPrestamo;
 import Vista.AgregarRecurso;
@@ -17,12 +16,16 @@ import Vista.VentanaPrestamoSiguiente;
 import Vista.VentanaPrincipal;
 import Vista.VentanaRecursos;
 import Vista.VentanaUsuarios;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import modelo.recurso;
 
 
-public class Controlador {
+public class Controlador implements ActionListener{
     
     //ATRIBUTOS
-    private modelo modelo;
+    private usuario usuario;
+    private recurso recurso;
     
     private ActualizarUsuario vistaActualizarUsuario;
     
@@ -45,14 +48,16 @@ public class Controlador {
     private VentanaUsuarios vistaVentanaUsuarios;
     
     //METODO CONSTRUCTOR
-    public Controlador (modelo modelo, ActualizarUsuario vistaActualizarUsuario, AgregarPrestamo vistaAgregarPrestamo,
+    public Controlador (usuario usuario, recurso recurso, ActualizarUsuario vistaActualizarUsuario, AgregarPrestamo vistaAgregarPrestamo,
         AgregarRecurso vistaAgregarRecurso, AgregarUsuario vistaAgregarUsuario, EliminarPrestamo vistaEliminarPrestamo,
         EliminarRecurso vistaEliminarRecurso, EliminarUsuario vistaEliminarUsuario, ListaPrestamo vistaListaPrestamo,
         ListaRecursos vistaListaRecursos, ListaUsuarios vistaListaUsuarios, VentanaPrestamo vistaVentanaPrestamo,
         VentanaPrestamoSiguiente vistaVentanaPrestamoSiguiente, VentanaPrincipal vistaVentanaPrincipal,
         VentanaRecursos vistaVentanaRecursos, VentanaUsuarios vistaVentanaUsuarios) {
         
-        this.modelo = modelo;
+        this.usuario = usuario;
+        this.recurso = recurso;
+        
         this.vistaActualizarUsuario = vistaActualizarUsuario;
         
         this.vistaAgregarPrestamo = vistaAgregarPrestamo;
@@ -75,5 +80,10 @@ public class Controlador {
         this.vistaVentanaUsuarios = vistaVentanaUsuarios;
         
     };
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

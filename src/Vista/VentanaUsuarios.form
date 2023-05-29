@@ -23,18 +23,12 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" pref="350" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-          </Group>
+          <Component id="jPanel1" alignment="0" pref="395" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -45,54 +39,56 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="310" pref="310" max="-2" attributes="0"/>
-                  <Component id="BotonActualizar" min="-2" pref="150" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
+                          <Component id="jLabel1" min="-2" pref="360" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="110" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="BotonAgregar" min="-2" pref="150" max="-2" attributes="0"/>
+                              <Component id="BotonEliminar" min="-2" pref="150" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
+                                  <Component id="BotonListar" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="BotonActualizar" min="-2" pref="150" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="111" max="32767" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
-                  <Component id="BotonEliminar" min="-2" pref="150" max="-2" attributes="0"/>
-                  <EmptySpace min="50" pref="50" max="-2" attributes="0"/>
-                  <Component id="BotonListar" min="-2" pref="150" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="200" pref="200" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" pref="360" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="110" pref="110" max="-2" attributes="0"/>
-                  <Component id="BotonAgregar" min="-2" pref="150" max="-2" attributes="0"/>
-              </Group>
-              <Component id="Fondo" min="-2" pref="550" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="BotonActualizar" min="-2" pref="70" max="-2" attributes="0"/>
-                  <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="BotonEliminar" min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="BotonListar" min="-2" pref="70" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="410" pref="410" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" pref="60" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BotonAgregar" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="BotonActualizar" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="BotonEliminar" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                      <Component id="BotonListar" alignment="3" min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="175" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
-              <Group type="102" attributes="0">
-                  <EmptySpace min="210" pref="210" max="-2" attributes="0"/>
-                  <Component id="BotonAgregar" min="-2" pref="70" max="-2" attributes="0"/>
-              </Group>
-              <Component id="Fondo" min="-2" pref="450" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -109,6 +105,14 @@
               </Border>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="BotonListar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="LISTAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonListarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="BotonAgregar">
           <Properties>
@@ -140,16 +144,6 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="Fondo">
-        </Component>
-        <Component class="javax.swing.JButton" name="BotonListar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="LISTAR"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BotonListarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
