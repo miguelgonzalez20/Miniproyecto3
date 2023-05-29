@@ -3,11 +3,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Modelo/Modelo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ListaUsuarios.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaUsuarios.java</file>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaPrincipal.java</file>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Controlador/Controlador.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/EliminarUsuario.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Modelo/Modelo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ActualizarUsuario.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaRecursos.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarPrestamo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaPrestamo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/EliminarPrestamo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ListaRecursos.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/main/main.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaPrestamoSiguiente.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/EliminarRecurso.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarUsuario.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaPrincipal.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ListaPrestamo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarRecurso.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Controlador/Controlador.java</file>
         </group>
     </open-files>
 </project-private>
