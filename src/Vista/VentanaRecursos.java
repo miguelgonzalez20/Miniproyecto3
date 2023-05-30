@@ -5,6 +5,10 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorAgregarRecurso;
+import controladorVentanas.ControladorEliminarRecurso;
+import controladorVentanas.ControladorVentanaRecurso;
+
 /**
  *
  * @author Miguel
@@ -113,11 +117,13 @@ public class VentanaRecursos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
+        ControladorAgregarRecurso.mostrar();
+        ControladorVentanaRecurso.ocultar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        ControladorEliminarRecurso.mostrar();
+        ControladorVentanaRecurso.ocultar();
 
     }//GEN-LAST:event_jButton2ActionPerformed
 

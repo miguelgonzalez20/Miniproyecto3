@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorPrestamo;
 import controladorVentanas.ControladorVentanaPrincipal;
 import controladorVentanas.ControladorVentanaRecurso;
 import controladorVentanas.ControladorVentanaUsuarios;
@@ -128,7 +129,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonPrestamoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        ControladorPrestamo.mostrar();
+        ControladorVentanaPrincipal.ocultar();
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

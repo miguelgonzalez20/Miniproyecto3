@@ -12,7 +12,6 @@ import Vista.ListaPrestamo;
 import Vista.ListaRecursos;
 import Vista.ListaUsuarios;
 import Vista.VentanaPrestamo;
-import Vista.VentanaPrestamoSiguiente;
 import Vista.VentanaPrincipal;
 import Vista.VentanaRecursos;
 import Vista.VentanaUsuarios;
@@ -42,7 +41,6 @@ public class Controlador implements ActionListener{
     private ListaUsuarios vistaListaUsuarios;
     
     private VentanaPrestamo vistaVentanaPrestamo;
-    private VentanaPrestamoSiguiente vistaVentanaPrestamoSiguiente;
     private VentanaPrincipal vistaVentanaPrincipal;
     private VentanaRecursos vistaVentanaRecursos;
     private VentanaUsuarios vistaVentanaUsuarios;
@@ -52,7 +50,7 @@ public class Controlador implements ActionListener{
         AgregarRecurso vistaAgregarRecurso, AgregarUsuario vistaAgregarUsuario, EliminarPrestamo vistaEliminarPrestamo,
         EliminarRecurso vistaEliminarRecurso, EliminarUsuario vistaEliminarUsuario, ListaPrestamo vistaListaPrestamo,
         ListaRecursos vistaListaRecursos, ListaUsuarios vistaListaUsuarios, VentanaPrestamo vistaVentanaPrestamo,
-        VentanaPrestamoSiguiente vistaVentanaPrestamoSiguiente, VentanaPrincipal vistaVentanaPrincipal,
+         VentanaPrincipal vistaVentanaPrincipal,
         VentanaRecursos vistaVentanaRecursos, VentanaUsuarios vistaVentanaUsuarios) {
         
         this.usuario = usuario;
@@ -73,7 +71,6 @@ public class Controlador implements ActionListener{
         this.vistaListaUsuarios = vistaListaUsuarios;
         
         this.vistaVentanaPrestamo = vistaVentanaPrestamo;
-        this.vistaVentanaPrestamoSiguiente = vistaVentanaPrestamoSiguiente;
         
         this.vistaVentanaPrincipal = vistaVentanaPrincipal;
         this.vistaVentanaRecursos = vistaVentanaRecursos;
