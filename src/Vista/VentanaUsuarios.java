@@ -10,6 +10,7 @@ import controladorVentanas.ControladorAgregarUsuario;
 import controladorVentanas.ControladorEliminarUsuario;
 import controladorVentanas.ControladorListaUsuarios;
 import controladorVentanas.ControladorVentanaUsuarios;
+import modelo.usuario;
 
 /**
  *
@@ -156,7 +157,12 @@ public class VentanaUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_BotonActualizarActionPerformed
 
     private void BotonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarActionPerformed
-        ControladorAgregarUsuario.mostrar();
+        AgregarUsuario vista = new AgregarUsuario();
+        usuario modelo = new usuario("miguel", 123, "estudiante");
+        //TrianguloController controller = new TrianguloController(modelo, vista);
+        ControladorAgregarUsuario controlador = new ControladorAgregarUsuario(modelo, vista);
+        
+        //ControladorAgregarUsuario.mostrar();
         ControladorVentanaUsuarios.ocultar();
     }//GEN-LAST:event_BotonAgregarActionPerformed
 
