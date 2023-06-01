@@ -38,7 +38,7 @@ public class AgregarUsuario extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         BotonAceptar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        CC = new javax.swing.JTextField();
+        cc = new javax.swing.JTextField();
         listaTipoUsuario = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,6 +61,12 @@ public class AgregarUsuario extends javax.swing.JFrame {
         });
 
         jLabel3.setText("ID:");
+
+        cc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ccActionPerformed(evt);
+            }
+        });
 
         listaTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROFESOR", "ESTUDIANTE", "EMPLEADO LIBRERIA" }));
         listaTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -87,7 +93,7 @@ public class AgregarUsuario extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3)
                         .addGap(30, 30, 30)
-                        .addComponent(CC, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(cc, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(122, 122, 122)
                         .addComponent(BotonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -103,18 +109,19 @@ public class AgregarUsuario extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(jLabel2)
-                        .addGap(69, 69, 69)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
+                                .addGap(78, 78, 78)
                                 .addComponent(jLabel1))
-                            .addComponent(nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(15, 15, 15)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(69, 69, 69)
+                                .addComponent(nombreUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
                                 .addComponent(jLabel3))
-                            .addComponent(CC, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(cc, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(BotonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -160,6 +167,14 @@ public class AgregarUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_listaTipoUsuarioActionPerformed
 
+    private void ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ccActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ccActionPerformed
+    
+    public String obtenerElementoSeleccionado() {
+        return (String) listaTipoUsuario.getSelectedItem();
+    }
+    
     public JButton getBotonAceptar() {
         return BotonAceptar;
     }
@@ -168,8 +183,8 @@ public class AgregarUsuario extends javax.swing.JFrame {
         BotonAceptar.addActionListener(listenControles);
     }
 
-    public JTextField getCC() {
-        return CC;
+    public JTextField getcc() {
+        return cc;
     }
 
     public JComboBox<String> getListaTipoUsuario() {
@@ -180,11 +195,11 @@ public class AgregarUsuario extends javax.swing.JFrame {
         return nombreUsuario;
     }
     
-
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonAceptar;
-    private javax.swing.JTextField CC;
+    private javax.swing.JTextField cc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

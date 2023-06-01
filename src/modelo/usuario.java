@@ -5,15 +5,21 @@
  */
 package modelo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  *
  * @author Miguel
  */
 public class usuario {
+    //ATRIBUTOS
+    public Map<Integer,String> coleccion = new HashMap<>();
     
     private String nombre;
     private int cc;
     private String tipo;
+    
 
     public usuario(String nombre, int cc, String tipo) {
         this.nombre = nombre;

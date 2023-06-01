@@ -3,8 +3,11 @@ package controladorVentanas;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 import Vista.AgregarUsuario;
+import java.util.HashMap;
+import java.util.Map;
 import modelo.usuario;
 
 
@@ -12,9 +15,10 @@ public class ControladorAgregarUsuario{
     
     //public static AgregarUsuario ventana = new AgregarUsuario();
     
+    String nombre;
     private AgregarUsuario Vista;
     private usuario modelo;
-    
+     
     //METODO CONSTRUCTOR
     public ControladorAgregarUsuario(usuario modelo, AgregarUsuario Vista){
         this.modelo = modelo;
@@ -27,17 +31,29 @@ public class ControladorAgregarUsuario{
     }
     
     class CalculateListener implements ActionListener{
-
+         String palabra;
+         String nombre;
+         String tipoUsuario;
+         String cedula;
+         
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("ACEPTAR")){
+                nombre = Vista.nombreUsuario.getText();
+                tipoUsuario = Vista.obtenerElementoSeleccionado();
+                palabra = nombre + " " + tipoUsuario;
                 
+                cedula = Vista.cc.getText();
+                
+                System.out.println(palabra);
+                
+                modelo.coleccion.put(1,palabra);
                 System.out.println("LE DI A ACEPTAR");
-            }
-              
-        }
-        
+            }   
+        }  
     }
+
+ 
     
     /*public static void mostrar(){
         ventana.setVisible(true);
