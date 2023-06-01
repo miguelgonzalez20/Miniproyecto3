@@ -5,6 +5,7 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -51,6 +52,11 @@ public class ListaUsuarios extends javax.swing.JFrame {
         });
 
         jButton2.setText("MENU PRINCIPAL");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         TxtUsuarios.setColumns(20);
         TxtUsuarios.setRows(5);
@@ -107,6 +113,11 @@ public class ListaUsuarios extends javax.swing.JFrame {
     private void botonVisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVisualizarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_botonVisualizarActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        ControladorVentanaPrincipal.mostrar();
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     public void addebotonVisualizarListener(ActionListener listenControles){
         botonVisualizar.addActionListener(listenControles);

@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorAgregarUsuario;
+import controladorVentanas.ControladorEliminarUsuario;
+import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
@@ -118,7 +121,9 @@ public class EliminarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_eliminarUsuarioActionPerformed
 
     private void eliminadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminadoActionPerformed
-        
+        ControladorEliminarUsuario.ocultar();
+        ControladorVentanaPrincipal.mostrar();
+        this.dispose();
     }//GEN-LAST:event_eliminadoActionPerformed
     public void addeliminarUsuarioListener(ActionListener listenControles){
         eliminarUsuario.addActionListener(listenControles);

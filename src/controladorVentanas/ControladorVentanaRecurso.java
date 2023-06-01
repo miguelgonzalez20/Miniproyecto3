@@ -6,6 +6,7 @@
 package controladorVentanas;
 
 import Vista.VentanaRecursos;
+import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 
 /**
  *
@@ -21,6 +22,7 @@ public class ControladorVentanaRecurso {
     }
     public static void ocultar(){
         ventana.setVisible(false);
+        ventana.dispose();
     }
     
 }

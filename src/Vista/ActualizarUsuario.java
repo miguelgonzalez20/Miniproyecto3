@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorActualizarUsuario;
+import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
@@ -57,6 +59,11 @@ public class ActualizarUsuario extends javax.swing.JFrame {
 
         botonFinalizar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         botonFinalizar.setText("FINALIZAR");
+        botonFinalizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonFinalizarActionPerformed(evt);
+            }
+        });
 
         listaTipoUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PROFESOR", "ESTUDIANTE", "EMPLEADO LIBRERIA" }));
         listaTipoUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -151,10 +158,20 @@ public class ActualizarUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_listaTipoUsuarioActionPerformed
 
+    private void botonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFinalizarActionPerformed
+        ControladorActualizarUsuario.ocultar();
+        ControladorVentanaPrincipal.mostrar();
+        this.dispose();
+    }//GEN-LAST:event_botonFinalizarActionPerformed
+
     public void addebotonFinalizarListener(ActionListener listenControles){
         botonFinalizar.addActionListener(listenControles);
     }
-
+    
+    public String obtenerElementoSeleccionado() {
+        return (String) listaTipoUsuario.getSelectedItem();
+    }
+    
     public String getTextCC() {
         String text;
         text = cc.getText();

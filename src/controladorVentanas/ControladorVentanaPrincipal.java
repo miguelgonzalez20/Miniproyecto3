@@ -13,5 +13,6 @@ public class ControladorVentanaPrincipal {
     }
     public static void ocultar(){
         ventana.setVisible(false);
+        ventana.dispose();
     }
 }

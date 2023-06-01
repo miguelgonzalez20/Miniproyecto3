@@ -161,9 +161,9 @@ public class AgregarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreUsuarioActionPerformed
 
     private void BotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarActionPerformed
-        ControladorAgregarUsuario.ocultar();
         ControladorVentanaPrincipal.mostrar();
-        
+        ControladorAgregarUsuario.ocultar();
+        this.dispose();
     }//GEN-LAST:event_BotonAceptarActionPerformed
 
     private void listaTipoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaTipoUsuarioActionPerformed

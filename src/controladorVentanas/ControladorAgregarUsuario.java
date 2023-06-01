@@ -14,7 +14,7 @@ import modelo.usuario;
 
 public class ControladorAgregarUsuario{
     
-    //public static AgregarUsuario ventana = new AgregarUsuario();
+    public static AgregarUsuario ventana = new AgregarUsuario();
     
     String nombre;
     private AgregarUsuario Vista;
@@ -46,7 +46,6 @@ public class ControladorAgregarUsuario{
                 palabra = nombre + " " + tipoUsuario;
                 cedula = Vista.p1();
                 IntCedula = Integer.parseInt(cedula);
-               
                 
                 modelo.coleccion.put(IntCedula,palabra);
                 System.out.println(modelo.coleccion);
@@ -63,6 +62,7 @@ public class ControladorAgregarUsuario{
     }
     public static void ocultar(){
         ventana.setVisible(false);
+        ventana.dispose();
     }
 
     public void actionPerformed(ActionEvent e) {

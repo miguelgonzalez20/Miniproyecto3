@@ -3,6 +3,7 @@ package controladorVentanas;
 
 import Vista.ActualizarUsuario;
 import Vista.ListaUsuarios;
+import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import modelo.usuario;
@@ -24,19 +25,33 @@ public class ControladorActualizarUsuario {
     }
     
     class CalculateListener implements ActionListener{
-        String nombreMap;
-        String tipoDeUsuarioMap;
-        
-        String cedula;
-        int IntCedula;
-        String nuevoNombre;
+        String palabra; //Palabra concatenada para pasar
+         String nombre;
+         String tipoUsuario;
+         String cedula;
+         int IntCedula;
         
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
-                nombre = Vista.nombreUsuario.getText();
+                nombre = Vista.getTextNuevoNombre();
                 tipoUsuario = Vista.obtenerElementoSeleccionado();
+                cedula = Vista.getTextCC();
+                palabra = nombre + " " + tipoUsuario;
+                IntCedula = Integer.parseInt(cedula);
+                usuario.coleccion.put(IntCedula, palabra);
             }   
-        }  
+        }
+        
+    
+    }
+    
+    public static void mostrar(){
+        ventana.setVisible(true);
+        ventana.setLocationRelativeTo(null);
+    }
+    public static void ocultar(){
+        ventana.setVisible(false);
+        ventana.dispose();
     }
     
 }

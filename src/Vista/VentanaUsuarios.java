@@ -145,28 +145,31 @@ public class VentanaUsuarios extends javax.swing.JFrame {
         EliminarUsuario vista = new EliminarUsuario();
         usuario modelo = new usuario();
         ControladorEliminarUsuario controlador = new ControladorEliminarUsuario(modelo, vista);
+        this.dispose();
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     private void BotonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonListarActionPerformed
         ListaUsuarios vista = new ListaUsuarios();
         usuario modelo = new usuario();
         ControladorListaUsuarios controlador = new ControladorListaUsuarios(modelo, vista);
+        this.dispose();
     }//GEN-LAST:event_BotonListarActionPerformed
 
     private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed
         ActualizarUsuario vista = new ActualizarUsuario();
         usuario modelo = new usuario();
         ControladorActualizarUsuario controlador = new ControladorActualizarUsuario(modelo, vista);
+        this.dispose();
     }//GEN-LAST:event_BotonActualizarActionPerformed
 
     private void BotonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarActionPerformed
         AgregarUsuario vista = new AgregarUsuario();
         usuario modelo = new usuario();
-        //TrianguloController controller = new TrianguloController(modelo, vista);
         ControladorAgregarUsuario controlador = new ControladorAgregarUsuario(modelo, vista);
-        
-        //ControladorAgregarUsuario.mostrar();
+       
         ControladorVentanaUsuarios.ocultar();
+        this.dispose();
+        
     }//GEN-LAST:event_BotonAgregarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

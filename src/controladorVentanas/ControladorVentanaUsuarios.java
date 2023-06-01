@@ -2,6 +2,7 @@
 package controladorVentanas;
 
 import Vista.VentanaUsuarios;
+import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 
 public class ControladorVentanaUsuarios {
     
@@ -13,6 +14,7 @@ public class ControladorVentanaUsuarios {
     }
     public static void ocultar(){
         ventana.setVisible(false);
+        ventana.dispose();
     }
     
 }

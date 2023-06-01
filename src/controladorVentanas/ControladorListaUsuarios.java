@@ -7,6 +7,7 @@ package controladorVentanas;
 
 import Vista.EliminarUsuario;
 import Vista.ListaUsuarios;
+import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -66,13 +67,14 @@ public class ControladorListaUsuarios {
         return sb.toString();
     }
     
-    /*public static void mostrar(){
+    public static void mostrar(){
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
     }
     public static void ocultar(){
         ventana.setVisible(false);
-    }*/
+        ventana.dispose();
+    }
 
     public void actionPerformed(ActionEvent e) {
         
