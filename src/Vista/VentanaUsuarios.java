@@ -156,7 +156,7 @@ public class VentanaUsuarios extends javax.swing.JFrame {
     private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed
         ActualizarUsuario vista = new ActualizarUsuario();
         usuario modelo = new usuario();
-        ControladorListaUsuarios controlador = new ControladorListaUsuarios(modelo, vista);
+        ControladorActualizarUsuario controlador = new ControladorActualizarUsuario(modelo, vista);
     }//GEN-LAST:event_BotonActualizarActionPerformed
 
     private void BotonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarActionPerformed

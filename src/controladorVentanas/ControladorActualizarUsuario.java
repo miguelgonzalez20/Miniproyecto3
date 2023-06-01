@@ -20,7 +20,7 @@ public class ControladorActualizarUsuario {
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
        
-        this.Vista.addebotonVisualizarListener(new CalculateListener());
+        this.Vista.addebotonActualizarListener(new CalculateListener());
     }
     
     class CalculateListener implements ActionListener{
@@ -29,13 +29,7 @@ public class ControladorActualizarUsuario {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
-                StringBuilder stringBuilder = new StringBuilder();
                 
-                for (Integer key : usuario.coleccion.keySet()) {
-                    stringBuilder.append(key).append(": ").append(usuario.coleccion.get(key)).append("\n"); 
-                }
-                String elements = stringBuilder.toString();
-                Vista.setTxtUsuarios(elements);
             }   
         }  
     }
