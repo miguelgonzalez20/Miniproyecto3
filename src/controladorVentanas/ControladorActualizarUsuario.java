@@ -20,16 +20,21 @@ public class ControladorActualizarUsuario {
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
        
-        this.Vista.addebotonActualizarListener(new CalculateListener());
+        this.Vista.addebotonFinalizarListener(new CalculateListener());
     }
     
     class CalculateListener implements ActionListener{
-         
-        String usuarios;
-        @Override
+        String nombreMap;
+        String tipoDeUsuarioMap;
+        
+        String cedula;
+        int IntCedula;
+        String nuevoNombre;
+        
         public void actionPerformed(ActionEvent e) {
-            if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
-                
+            if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
+                nombre = Vista.nombreUsuario.getText();
+                tipoUsuario = Vista.obtenerElementoSeleccionado();
             }   
         }  
     }

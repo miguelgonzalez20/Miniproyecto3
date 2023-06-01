@@ -43,12 +43,9 @@ public class ControladorListaUsuarios {
                 StringBuilder stringBuilder = new StringBuilder();
                 
                 for (Integer key : usuario.coleccion.keySet()) {
-                    stringBuilder.append(key).append(": ").append(usuario.coleccion.get(key)).append("\n");
-                    
+                    stringBuilder.append(key).append(": ").append(usuario.coleccion.get(key)).append("\n"); 
                 }
-                
                 String elements = stringBuilder.toString();
-                //usuarios = hashMapToString(usuario.coleccion);
                 Vista.setTxtUsuarios(elements);
             }   
         }  
