@@ -6,6 +6,7 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 /**
  *
@@ -32,7 +33,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        nombreeliminar = new javax.swing.JTextField();
+        ccDigitada = new javax.swing.JTextField();
         eliminarUsuario = new javax.swing.JButton();
         eliminado = new javax.swing.JButton();
 
@@ -72,7 +73,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
-                .addComponent(nombreeliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ccDigitada, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -88,7 +89,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nombreeliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ccDigitada, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(68, 68, 68)
@@ -123,12 +124,20 @@ public class EliminarUsuario extends javax.swing.JFrame {
         eliminarUsuario.addActionListener(listenControles);
     }
 
+    public String getCcDigitada() {
+        String cedula = ccDigitada.getText();
+             
+        return cedula;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ccDigitada;
     private javax.swing.JButton eliminado;
     private javax.swing.JButton eliminarUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombreeliminar;
     // End of variables declaration//GEN-END:variables
 }

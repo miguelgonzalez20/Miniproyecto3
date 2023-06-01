@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 
 import Vista.AgregarUsuario;
+import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.util.HashMap;
 import java.util.Map;
 import modelo.usuario;
@@ -56,13 +57,13 @@ public class ControladorAgregarUsuario{
 
  
     
-    /*public static void mostrar(){
+    public static void mostrar(){
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
     }
     public static void ocultar(){
         ventana.setVisible(false);
-    }*/
+    }
 
     public void actionPerformed(ActionEvent e) {
         

@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import controladorVentanas.ControladorAgregarUsuario;
+import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -159,6 +161,8 @@ public class AgregarUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_nombreUsuarioActionPerformed
 
     private void BotonAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarActionPerformed
+        ControladorAgregarUsuario.ocultar();
+        ControladorVentanaPrincipal.mostrar();
         
     }//GEN-LAST:event_BotonAceptarActionPerformed
 

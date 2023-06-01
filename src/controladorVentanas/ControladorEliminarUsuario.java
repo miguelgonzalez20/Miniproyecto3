@@ -35,11 +35,16 @@ public class ControladorEliminarUsuario {
     
     class CalculateListener implements ActionListener{
          
-         
+         String cedula;
+         int intCedula;
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getActionCommand().equalsIgnoreCase("ACEPTAR")){
+            if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
+                cedula = Vista.getCcDigitada();
+                intCedula = Integer.parseInt(cedula);
+                usuario.coleccion.remove(intCedula);
                 
+                System.out.println(usuario.coleccion);
             }   
         }  
     }

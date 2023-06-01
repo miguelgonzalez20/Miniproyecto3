@@ -144,13 +144,13 @@ public class VentanaUsuarios extends javax.swing.JFrame {
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
         EliminarUsuario vista = new EliminarUsuario();
         usuario modelo = new usuario();
-        //TrianguloController controller = new TrianguloController(modelo, vista);
         ControladorEliminarUsuario controlador = new ControladorEliminarUsuario(modelo, vista);
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     private void BotonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonListarActionPerformed
-        ControladorVentanaUsuarios.ocultar();
-        ControladorListaUsuarios.mostrar();
+        ListaUsuarios vista = new ListaUsuarios();
+        usuario modelo = new usuario();
+        ControladorListaUsuarios controlador = new ControladorListaUsuarios(modelo, vista);
     }//GEN-LAST:event_BotonListarActionPerformed
 
     private void BotonActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonActualizarActionPerformed

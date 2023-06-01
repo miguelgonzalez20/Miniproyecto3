@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public class usuario {
     //ATRIBUTOS
-    public Map<Integer,String> coleccion = new HashMap<>();
+    public static Map<Integer,String> coleccion = new HashMap<>();
     
     private String nombre;
     private int cc;
@@ -24,7 +24,22 @@ public class usuario {
     public usuario(){
         
     }
-            
+    
+    public static String hashMapToString(HashMap<?, ?> hashMap) {
+        StringBuilder sb = new StringBuilder();
+
+        for (Map.Entry<?, ?> entry : hashMap.entrySet()) {
+            sb.append(entry.getKey()).append(": ").append(entry.getValue()).append(", ");
+        }
+
+        // Eliminar la última coma y espacio
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - 2);
+        }
+
+        return sb.toString();
+    }
+    
     public usuario(String nombre, int cc, String tipo) {
         this.nombre = nombre;
         this.cc = cc;
