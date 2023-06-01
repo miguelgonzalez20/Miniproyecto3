@@ -3,15 +3,21 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ListaUsuarios.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaUsuarios.java</file>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarUsuario.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/EliminarUsuario.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/ActualizarUsuario.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarPrestamo.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorVentanaUsuarios.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorListaUsuarios.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/main/main.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarUsuario.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/VentanaPrincipal.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/modelo/usuario.java</file>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarPrestamo.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/modelo/recurso.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorAgregarRecurso.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/Vista/AgregarRecurso.java</file>
-            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorVentanaUsuarios.java</file>
+            <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorEliminarUsuario.java</file>
             <file>file:/C:/Users/Miguel/Desktop/Miniproyecto3/src/controladorVentanas/ControladorAgregarUsuario.java</file>
         </group>
     </open-files>

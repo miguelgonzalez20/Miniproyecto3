@@ -9,6 +9,9 @@ import Vista.EliminarUsuario;
 import Vista.ListaUsuarios;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import java.util.Map;
+import javax.swing.JTextField;
 import modelo.usuario;
 
 /**
@@ -37,15 +40,34 @@ public class ControladorListaUsuarios {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
+                StringBuilder stringBuilder = new StringBuilder();
                 
-                usuarios = modelo.hashMapToString(modelo.coleccion);
+                for (Integer key : usuario.coleccion.keySet()) {
+                    stringBuilder.append(key).append(": ").append(usuario.coleccion.get(key)).append("\n");
+                    
+                }
                 
-                Vista.setTxtUsuarios(modelo.coleccionToString());
+                String elements = stringBuilder.toString();
+                //usuarios = hashMapToString(usuario.coleccion);
+                Vista.setTxtUsuarios(elements);
             }   
         }  
     }
 
- 
+    public static String hashMapToString(HashMap<?, ?> hashMap) {
+        StringBuilder sb = new StringBuilder();
+
+        for (Map.Entry<?, ?> entry : hashMap.entrySet()) {
+            sb.append(entry.getKey()).append(": ").append(entry.getValue()).append(", ");
+        }
+
+        // Eliminar la última coma y espacio
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - 2);
+        }
+
+        return sb.toString();
+    }
     
     /*public static void mostrar(){
         ventana.setVisible(true);

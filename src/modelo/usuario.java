@@ -25,21 +25,6 @@ public class usuario {
         
     }
     
-    public static String hashMapToString(HashMap<?, ?> hashMap) {
-        StringBuilder sb = new StringBuilder();
-
-        for (Map.Entry<?, ?> entry : hashMap.entrySet()) {
-            sb.append(entry.getKey()).append(": ").append(entry.getValue()).append(", ");
-        }
-
-        // Eliminar la última coma y espacio
-        if (sb.length() > 0) {
-            sb.setLength(sb.length() - 2);
-        }
-
-        return sb.toString();
-    }
-    
     public usuario(String nombre, int cc, String tipo) {
         this.nombre = nombre;
         this.cc = cc;

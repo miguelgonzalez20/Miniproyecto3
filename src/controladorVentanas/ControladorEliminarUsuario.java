@@ -17,8 +17,6 @@ import modelo.usuario;
  */
 public class ControladorEliminarUsuario {
     
-    String nombre;
-    
     private EliminarUsuario Vista;
     private usuario modelo;
      
@@ -43,7 +41,6 @@ public class ControladorEliminarUsuario {
                 cedula = Vista.getCcDigitada();
                 intCedula = Integer.parseInt(cedula);
                 usuario.coleccion.remove(intCedula);
-                
                 System.out.println(usuario.coleccion);
             }   
         }  
