@@ -16,9 +16,8 @@ import modelo.usuario;
  */
 public class AgregarUsuario extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AgregarUsuario1
-     */
+    public String cedula;
+    
     public AgregarUsuario() {
         initComponents();
     }
@@ -170,6 +169,11 @@ public class AgregarUsuario extends javax.swing.JFrame {
     private void ccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ccActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ccActionPerformed
+    
+    public String p1(){
+        this.cedula = cc.getText();
+        return cedula;
+    }
     
     public String obtenerElementoSeleccionado() {
         return (String) listaTipoUsuario.getSelectedItem();

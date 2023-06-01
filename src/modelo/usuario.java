@@ -20,7 +20,11 @@ public class usuario {
     private int cc;
     private String tipo;
     
-
+    
+    public usuario(){
+        
+    }
+            
     public usuario(String nombre, int cc, String tipo) {
         this.nombre = nombre;
         this.cc = cc;

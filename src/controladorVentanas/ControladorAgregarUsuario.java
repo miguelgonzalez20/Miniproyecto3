@@ -35,6 +35,7 @@ public class ControladorAgregarUsuario{
          String nombre;
          String tipoUsuario;
          String cedula;
+         int IntCedula;
          
         @Override
         public void actionPerformed(ActionEvent e) {
@@ -42,12 +43,12 @@ public class ControladorAgregarUsuario{
                 nombre = Vista.nombreUsuario.getText();
                 tipoUsuario = Vista.obtenerElementoSeleccionado();
                 palabra = nombre + " " + tipoUsuario;
+                cedula = Vista.p1();
+                IntCedula = Integer.parseInt(cedula);
+               
                 
-                cedula = Vista.cc.getText();
-                
-                System.out.println(palabra);
-                
-                modelo.coleccion.put(1,palabra);
+                modelo.coleccion.put(IntCedula,palabra);
+                System.out.println(modelo.coleccion);
                 System.out.println("LE DI A ACEPTAR");
             }   
         }  

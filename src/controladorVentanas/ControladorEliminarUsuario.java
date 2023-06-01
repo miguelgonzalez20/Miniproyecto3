@@ -5,7 +5,11 @@
  */
 package controladorVentanas;
 
+import Vista.AgregarUsuario;
 import Vista.EliminarUsuario;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import modelo.usuario;
 
 /**
  *
@@ -13,14 +17,46 @@ import Vista.EliminarUsuario;
  */
 public class ControladorEliminarUsuario {
     
-    public static EliminarUsuario ventana = new EliminarUsuario();
+    String nombre;
     
-    public static void mostrar(){
+    private EliminarUsuario Vista;
+    private usuario modelo;
+     
+    //METODO CONSTRUCTOR
+    public ControladorEliminarUsuario(usuario modelo, EliminarUsuario Vista){
+        this.modelo = modelo;
+        this.Vista = Vista;
+        
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
+       
+        this.Vista.addeliminarUsuarioListener(new CalculateListener());
+    }
+    
+    class CalculateListener implements ActionListener{
+         
+         
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(e.getActionCommand().equalsIgnoreCase("ACEPTAR")){
+                
+            }   
+        }  
+    }
+
+ 
+    
+    /*public static void mostrar(){
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
     }
     public static void ocultar(){
         ventana.setVisible(false);
+    }*/
+
+    public void actionPerformed(ActionEvent e) {
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

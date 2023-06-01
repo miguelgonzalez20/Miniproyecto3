@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Miguel
@@ -31,7 +33,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         nombreeliminar = new javax.swing.JTextField();
-        eliminarusuario = new javax.swing.JButton();
+        eliminarUsuario = new javax.swing.JButton();
         eliminado = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,11 +44,11 @@ public class EliminarUsuario extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel2.setText("CC:");
 
-        eliminarusuario.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        eliminarusuario.setText("ELIMINAR");
-        eliminarusuario.addActionListener(new java.awt.event.ActionListener() {
+        eliminarUsuario.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        eliminarUsuario.setText("ELIMINAR");
+        eliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarusuarioActionPerformed(evt);
+                eliminarUsuarioActionPerformed(evt);
             }
         });
 
@@ -72,7 +74,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(nombreeliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addComponent(eliminarusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -87,7 +89,7 @@ public class EliminarUsuario extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(nombreeliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(eliminarusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(eliminarUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(68, 68, 68)
                 .addComponent(eliminado, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -110,18 +112,20 @@ public class EliminarUsuario extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void eliminarusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarusuarioActionPerformed
+    private void eliminarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarUsuarioActionPerformed
         
-    }//GEN-LAST:event_eliminarusuarioActionPerformed
+    }//GEN-LAST:event_eliminarUsuarioActionPerformed
 
     private void eliminadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminadoActionPerformed
         
     }//GEN-LAST:event_eliminadoActionPerformed
-
+    public void addeliminarUsuarioListener(ActionListener listenControles){
+        eliminarUsuario.addActionListener(listenControles);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton eliminado;
-    private javax.swing.JButton eliminarusuario;
+    private javax.swing.JButton eliminarUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

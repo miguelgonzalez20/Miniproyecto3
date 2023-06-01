@@ -142,8 +142,10 @@ public class VentanaUsuarios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEliminarActionPerformed
-        ControladorVentanaUsuarios.ocultar();
-        ControladorEliminarUsuario.mostrar();
+        EliminarUsuario vista = new EliminarUsuario();
+        usuario modelo = new usuario();
+        //TrianguloController controller = new TrianguloController(modelo, vista);
+        ControladorEliminarUsuario controlador = new ControladorEliminarUsuario(modelo, vista);
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     private void BotonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonListarActionPerformed
@@ -158,7 +160,7 @@ public class VentanaUsuarios extends javax.swing.JFrame {
 
     private void BotonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAgregarActionPerformed
         AgregarUsuario vista = new AgregarUsuario();
-        usuario modelo = new usuario("miguel", 123, "estudiante");
+        usuario modelo = new usuario();
         //TrianguloController controller = new TrianguloController(modelo, vista);
         ControladorAgregarUsuario controlador = new ControladorAgregarUsuario(modelo, vista);
         
