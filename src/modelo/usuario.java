@@ -24,12 +24,6 @@ public class usuario {
     public usuario(){
         
     }
-    
-    public usuario(String nombre, int cc, String tipo) {
-        this.nombre = nombre;
-        this.cc = cc;
-        this.tipo = tipo;
-    }
 
     public String getNombre() {
         return nombre;

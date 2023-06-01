@@ -13,10 +13,7 @@ public class recurso {
     private String autor;
     private String categoria;
 
-    public recurso(String nombreRecurso, String autor, String categoria) {
-        this.nombreRecurso = nombreRecurso;
-        this.autor = autor;
-        this.categoria = categoria;
+    public recurso() {
     }
 
     public String getNombreRecurso() {

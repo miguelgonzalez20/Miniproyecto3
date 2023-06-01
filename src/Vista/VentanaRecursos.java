@@ -6,8 +6,12 @@
 package Vista;
 
 import controladorVentanas.ControladorAgregarRecurso;
+import controladorVentanas.ControladorAgregarUsuario;
 import controladorVentanas.ControladorEliminarRecurso;
+import controladorVentanas.ControladorVentanaPrincipal;
 import controladorVentanas.ControladorVentanaRecurso;
+import modelo.recurso;
+import modelo.usuario;
 
 /**
  *
@@ -117,18 +121,21 @@ public class VentanaRecursos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        ControladorAgregarRecurso.mostrar();
-        ControladorVentanaRecurso.ocultar();
+        AgregarRecurso vista = new AgregarRecurso();
+        recurso modelo = new recurso();
+        ControladorAgregarRecurso controlador = new ControladorAgregarRecurso(modelo, vista);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         ControladorEliminarRecurso.mostrar();
         ControladorVentanaRecurso.ocultar();
-
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void volverPrincipal1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverPrincipal1ActionPerformed
-        
+        ControladorVentanaPrincipal.mostrar();
+        this.dispose();
     }//GEN-LAST:event_volverPrincipal1ActionPerformed
 
 

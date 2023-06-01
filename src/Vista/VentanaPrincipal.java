@@ -34,7 +34,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         BotonUsuario = new javax.swing.JButton();
-        BotonPrestamo = new javax.swing.JButton();
+        botonRecurso = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -48,11 +48,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
             }
         });
 
-        BotonPrestamo.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        BotonPrestamo.setText("OPCIONES RECURSO");
-        BotonPrestamo.addActionListener(new java.awt.event.ActionListener() {
+        botonRecurso.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        botonRecurso.setText("OPCIONES RECURSO");
+        botonRecurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonPrestamoActionPerformed(evt);
+                botonRecursoActionPerformed(evt);
             }
         });
 
@@ -82,7 +82,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                         .addComponent(BotonUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(140, 140, 140)
-                        .addComponent(BotonPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(160, 160, 160)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -96,7 +96,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(BotonUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
-                .addComponent(BotonPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
@@ -121,10 +121,11 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ControladorVentanaPrincipal.ocultar();
     }//GEN-LAST:event_BotonUsuarioActionPerformed
 
-    private void BotonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPrestamoActionPerformed
+    private void botonRecursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRecursoActionPerformed
         ControladorVentanaRecurso.mostrar();
         ControladorVentanaPrincipal.ocultar();
-    }//GEN-LAST:event_BotonPrestamoActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_botonRecursoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ControladorPrestamo.mostrar();
@@ -133,8 +134,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonPrestamo;
     private javax.swing.JButton BotonUsuario;
+    private javax.swing.JButton botonRecurso;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

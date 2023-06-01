@@ -6,6 +6,8 @@ package Vista;
 
 import controladorVentanas.ControladorAgregarRecurso;
 import controladorVentanas.ControladorVentanaPrincipal;
+import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 
 /**
  *
@@ -32,12 +34,12 @@ public class AgregarRecurso extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        listatiporecurso = new javax.swing.JComboBox<>();
+        tipoRecurso = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
-        autor = new javax.swing.JTextField();
+        nombreAutor = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        nombrerecurso = new javax.swing.JTextField();
-        volverRecurso1 = new javax.swing.JButton();
+        nombreRecurso = new javax.swing.JTextField();
+        botonFinalizar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,25 +50,25 @@ public class AgregarRecurso extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel2.setText("TIPO DE RECURSO :");
 
-        listatiporecurso.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
-        listatiporecurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LIBROS", "REVISTAS" }));
+        tipoRecurso.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
+        tipoRecurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "LIBROS", "REVISTAS" }));
 
         jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel3.setText("AUTOR:");
 
-        autor.addActionListener(new java.awt.event.ActionListener() {
+        nombreAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                autorActionPerformed(evt);
+                nombreAutorActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel4.setText("NOMBRE DE RECUSO:");
 
-        volverRecurso1.setText("FINALIZAR");
-        volverRecurso1.addActionListener(new java.awt.event.ActionListener() {
+        botonFinalizar.setText("AGREGAR");
+        botonFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverRecurso1ActionPerformed(evt);
+                botonFinalizarActionPerformed(evt);
             }
         });
 
@@ -80,10 +82,10 @@ public class AgregarRecurso extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addComponent(jLabel3)
                         .addGap(83, 83, 83)
-                        .addComponent(autor, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nombreAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(208, 208, 208)
-                        .addComponent(volverRecurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(139, 139, 139)
                         .addComponent(jLabel1))
@@ -95,10 +97,10 @@ public class AgregarRecurso extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(13, 13, 13)
-                                .addComponent(nombrerecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(nombreRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
-                                .addComponent(listatiporecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(tipoRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -108,18 +110,18 @@ public class AgregarRecurso extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(61, 61, 61)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(listatiporecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tipoRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(autor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombreAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addComponent(nombrerecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(nombreRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
-                .addComponent(volverRecurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37))
         );
 
@@ -137,27 +139,45 @@ public class AgregarRecurso extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void volverRecurso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverRecurso1ActionPerformed
-        ControladorAgregarRecurso.ocultar();
+    private void botonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFinalizarActionPerformed
         ControladorVentanaPrincipal.mostrar();
-    }//GEN-LAST:event_volverRecurso1ActionPerformed
+        ControladorAgregarRecurso.ocultar();
+        
+    }//GEN-LAST:event_botonFinalizarActionPerformed
 
-    private void autorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_autorActionPerformed
+    private void nombreAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreAutorActionPerformed
         // TODO add your handling code here:
         
-    }//GEN-LAST:event_autorActionPerformed
+    }//GEN-LAST:event_nombreAutorActionPerformed
 
- 
+    public void addbotonFinalizarListener(ActionListener listenControles){
+        botonFinalizar.addActionListener(listenControles);
+    }
+
+    public String getNombreAutor() {
+        String nombre = "";
+        nombre.getText(nombreAutor);
+        return nombre;
+    }
+
+    public JTextField getNombreRecurso() {
+        return nombreRecurso;
+    }
+    public String obtenerElementoSeleccionado() {
+        return (String) tipoRecurso.getSelectedItem();
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField autor;
+    private javax.swing.JButton botonFinalizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JComboBox<String> listatiporecurso;
-    private javax.swing.JTextField nombrerecurso;
-    private javax.swing.JButton volverRecurso1;
+    private javax.swing.JTextField nombreAutor;
+    private javax.swing.JTextField nombreRecurso;
+    private javax.swing.JComboBox<String> tipoRecurso;
     // End of variables declaration//GEN-END:variables
 }

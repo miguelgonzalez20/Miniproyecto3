@@ -44,11 +44,11 @@
                           <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
                           <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="83" pref="83" max="-2" attributes="0"/>
-                          <Component id="autor" min="-2" pref="290" max="-2" attributes="0"/>
+                          <Component id="nombreAutor" min="-2" pref="290" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
-                          <Component id="volverRecurso1" min="-2" pref="160" max="-2" attributes="0"/>
+                          <Component id="botonFinalizar" min="-2" pref="160" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
@@ -63,11 +63,11 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
-                                  <Component id="nombrerecurso" min="-2" pref="290" max="-2" attributes="0"/>
+                                  <Component id="nombreRecurso" min="-2" pref="290" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="listatiporecurso" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tipoRecurso" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -83,21 +83,21 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="listatiporecurso" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tipoRecurso" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="43" pref="43" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="autor" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="nombreAutor" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="nombrerecurso" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="nombreRecurso" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="54" max="32767" attributes="0"/>
-                  <Component id="volverRecurso1" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Component id="botonFinalizar" min="-2" pref="60" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -125,7 +125,7 @@
             <Property name="text" type="java.lang.String" value="TIPO DE RECURSO :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JComboBox" name="listatiporecurso">
+        <Component class="javax.swing.JComboBox" name="tipoRecurso">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Arial Black" size="14" style="0"/>
@@ -149,9 +149,9 @@
             <Property name="text" type="java.lang.String" value="AUTOR:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="autor">
+        <Component class="javax.swing.JTextField" name="nombreAutor">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="autorActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nombreAutorActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
@@ -162,14 +162,14 @@
             <Property name="text" type="java.lang.String" value="NOMBRE DE RECUSO:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="nombrerecurso">
+        <Component class="javax.swing.JTextField" name="nombreRecurso">
         </Component>
-        <Component class="javax.swing.JButton" name="volverRecurso1">
+        <Component class="javax.swing.JButton" name="botonFinalizar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="FINALIZAR"/>
+            <Property name="text" type="java.lang.String" value="AGREGAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="volverRecurso1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonFinalizarActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
