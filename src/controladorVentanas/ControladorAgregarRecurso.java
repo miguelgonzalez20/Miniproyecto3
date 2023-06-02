@@ -10,6 +10,7 @@ import Vista.AgregarUsuario;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextField;
 import modelo.recurso;
 import modelo.usuario;
 
@@ -20,7 +21,8 @@ import modelo.usuario;
 public class ControladorAgregarRecurso {
     
     public static AgregarRecurso ventana = new AgregarRecurso();
-       
+    private JTextField nombreAutor;
+    
     String nombre;
     private AgregarRecurso Vista;
     private recurso modelo;
@@ -29,7 +31,8 @@ public class ControladorAgregarRecurso {
     public ControladorAgregarRecurso(recurso modelo, AgregarRecurso Vista){
         this.modelo = modelo;
         this.Vista = Vista;
-        
+        this.nombreAutor = this.Vista.getNombreAutor();
+                
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
        
@@ -40,14 +43,17 @@ public class ControladorAgregarRecurso {
          String palabra;
          String nombre;
          String tipoUsuario;
+         String nombreRecurso;
          String cedula;
          int IntCedula;
          
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
-                nombre = Vista.nombreAutor.getText();
+                nombre = nombreAutor.getText();
                 tipoUsuario = Vista.obtenerElementoSeleccionado();
+                
+                
                 palabra = nombre + " " + tipoUsuario;
                 cedula = Vista.p1();
                 IntCedula = Integer.parseInt(cedula);
