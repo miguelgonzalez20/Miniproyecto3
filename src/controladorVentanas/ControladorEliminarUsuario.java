@@ -10,6 +10,8 @@ import Vista.EliminarUsuario;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import javax.swing.JTextField;
 import modelo.usuario;
 
 /**
@@ -20,6 +22,8 @@ public class ControladorEliminarUsuario {
     
     private EliminarUsuario Vista;
     private usuario modelo;
+    private JTextField ccDigitada;
+    private HashMap<String, String> coleccioneliminarusuario;
      
     //METODO CONSTRUCTOR
     public ControladorEliminarUsuario(usuario modelo, EliminarUsuario Vista){
@@ -28,9 +32,13 @@ public class ControladorEliminarUsuario {
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
-       
+       this.ccDigitada = this.Vista.getTxteliminarusuario();
+        this.coleccioneliminarusuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.Vista.addeliminarUsuarioListener(new CalculateListener());
+        this.Vista.addeliminarUsuarioListener(new ControladorEliminarUsuario.CalculateListener());
     }
+
+    
     
     class CalculateListener implements ActionListener{
          
@@ -41,8 +49,8 @@ public class ControladorEliminarUsuario {
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
                 cedula = Vista.getCcDigitada();
                 intCedula = Integer.parseInt(cedula);
-                usuario.coleccion.remove(intCedula);
-                System.out.println(usuario.coleccion);
+                usuario.coleccionUsuario.remove(intCedula);
+                System.out.println(usuario.coleccionUsuario);
             }   
         }  
     }

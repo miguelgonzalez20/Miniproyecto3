@@ -48,6 +48,12 @@ public class EliminarUsuario extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel2.setText("CC:");
 
+        ccDigitada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ccDigitadaActionPerformed(evt);
+            }
+        });
+
         eliminarUsuario.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         eliminarUsuario.setText("ELIMINAR");
         eliminarUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -125,6 +131,10 @@ public class EliminarUsuario extends javax.swing.JFrame {
         ControladorVentanaPrincipal.mostrar();
         this.dispose();
     }//GEN-LAST:event_eliminadoActionPerformed
+
+    private void ccDigitadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ccDigitadaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ccDigitadaActionPerformed
     public void addeliminarUsuarioListener(ActionListener listenControles){
         eliminarUsuario.addActionListener(listenControles);
     }
@@ -145,4 +155,8 @@ public class EliminarUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
+    public JTextField getTxteliminarusuario() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
