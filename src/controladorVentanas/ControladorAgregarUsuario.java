@@ -48,6 +48,7 @@ public class ControladorAgregarUsuario{
                 tipoU = (String) listaTipoUsuario.getSelectedItem();
                 palabra = nombreUsuario + " " + tipoU;
                 coleccionUsuario.put(cc, palabra);
+                System.out.println(coleccionUsuario);
             }   
         }  
     }

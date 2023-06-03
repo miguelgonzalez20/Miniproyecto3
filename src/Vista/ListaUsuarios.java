@@ -123,18 +123,18 @@ public class ListaUsuarios extends javax.swing.JFrame {
         botonVisualizar.addActionListener(listenControles);
     }
 
-    /*Field getTxtUsuarios() {
-        return txtUsuarios;
-    }*/
+    public JTextArea getTxtUsuarios() {
+        return TxtUsuarios;
+    }
+
+    public void addbotonVisualizarListener(ActionListener listenControles){
+        botonVisualizar.addActionListener(listenControles);
+    }
     
     public void setTxtUsuarios(String palabra) {
         TxtUsuarios.setText(palabra);
     }
 
-    /*public void setTxtUsuarios(String palabra) {
-        txtUsuarios.setText(palabra);
-    }*/
-    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea TxtUsuarios;

@@ -48,11 +48,7 @@ public class ControladorListaRecursos {
                 }
                 String elements = stringBuilder.toString();
                 listaRecursos.setText(elements);
-                /*nombreA = nombreAutor.getText();
-                nombreR = nombreRecurso.getText();
-                tipoR = (String) tipoUsuario.getSelectedItem();
-                palabra = nombreA + " " + tipoR;
-                coleccionRecursos.put(nombreR, palabra);*/
+                
             }   
         }  
     }
