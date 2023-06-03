@@ -6,43 +6,15 @@ import java.util.Map;
 
 
 public class recurso {
+    //ATRIBUTOS
+    private static Map<String,String> coleccionRecurso = new HashMap<>();
     
-    public static Map<String,String> coleccionRecurso = new HashMap<>();
-    
-    private String nombreRecurso;
-    private String autor;
-    private String categoria;
-
+    //CONSTRUCTOR
     public recurso() {
     }
-
-    public String getNombreRecurso() {
-        return nombreRecurso;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setNombreRecurso(String nombreRecurso) {
-        this.nombreRecurso = nombreRecurso;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-
+    
+    //METODOS
     public static Map<String, String> getColeccionRecurso() {
         return coleccionRecurso;
     }
-    
-    
 }
