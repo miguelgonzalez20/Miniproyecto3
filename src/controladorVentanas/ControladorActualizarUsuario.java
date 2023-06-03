@@ -2,7 +2,6 @@
 package controladorVentanas;
 
 import Vista.ActualizarUsuario;
-import Vista.ListaUsuarios;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

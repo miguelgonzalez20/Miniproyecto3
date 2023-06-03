@@ -8,6 +8,7 @@ package Vista;
 import controladorVentanas.ControladorAgregarRecurso;
 import controladorVentanas.ControladorAgregarUsuario;
 import controladorVentanas.ControladorEliminarRecurso;
+import controladorVentanas.ControladorListaRecursos;
 import controladorVentanas.ControladorVentanaPrincipal;
 import controladorVentanas.ControladorVentanaRecurso;
 import modelo.recurso;
@@ -37,9 +38,10 @@ public class VentanaRecursos extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        botonAgregar = new javax.swing.JButton();
+        botonListar = new javax.swing.JButton();
         botonEliminar = new javax.swing.JButton();
         volverPrincipal1 = new javax.swing.JButton();
+        botonAgregar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,10 +49,10 @@ public class VentanaRecursos extends javax.swing.JFrame {
         jLabel1.setText("OPCIONES RECURSO");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        botonAgregar.setText("AGREGAR");
-        botonAgregar.addActionListener(new java.awt.event.ActionListener() {
+        botonListar.setText("LISTAR");
+        botonListar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonAgregarActionPerformed(evt);
+                botonListarActionPerformed(evt);
             }
         });
 
@@ -68,6 +70,13 @@ public class VentanaRecursos extends javax.swing.JFrame {
             }
         });
 
+        botonAgregar1.setText("AGREGAR");
+        botonAgregar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAgregar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,31 +84,44 @@ public class VentanaRecursos extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(botonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(210, 210, 210)
                         .addComponent(volverPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(94, 94, 94)
+                        .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(botonListar, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
                         .addComponent(jLabel1)))
-                .addGap(66, 137, Short.MAX_VALUE))
+                .addGap(66, 76, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(94, 94, 94)
+                    .addComponent(botonAgregar1, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(344, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(45, 45, 45)
-                .addComponent(botonAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(botonListar, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82)))
                 .addComponent(volverPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(56, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(118, 118, 118)
+                    .addComponent(botonAgregar1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(232, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,12 +142,12 @@ public class VentanaRecursos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-        AgregarRecurso vista = new AgregarRecurso();
+    private void botonListarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonListarActionPerformed
+        ListaRecursos vista = new ListaRecursos();
         recurso modelo = new recurso();
-        ControladorAgregarRecurso controlador = new ControladorAgregarRecurso(modelo, vista);
+        ControladorListaRecursos controlador = new ControladorListaRecursos(modelo, vista);
         this.dispose();
-    }//GEN-LAST:event_botonAgregarActionPerformed
+    }//GEN-LAST:event_botonListarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
         EliminarRecurso vista = new EliminarRecurso();
@@ -139,10 +161,18 @@ public class VentanaRecursos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_volverPrincipal1ActionPerformed
 
+    private void botonAgregar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregar1ActionPerformed
+        AgregarRecurso vista = new AgregarRecurso();
+        recurso modelo = new recurso();
+        ControladorAgregarRecurso controlador = new ControladorAgregarRecurso(modelo, vista);
+        this.dispose();
+    }//GEN-LAST:event_botonAgregar1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botonAgregar;
+    private javax.swing.JButton botonAgregar1;
     private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonListar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton volverPrincipal1;

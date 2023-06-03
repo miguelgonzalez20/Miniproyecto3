@@ -11,8 +11,7 @@ public class usuario {
     private String nombre;
     private int cc;
     private String tipo;
-    
-    
+
     public usuario(){
         
     }

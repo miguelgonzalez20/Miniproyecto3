@@ -35,7 +35,7 @@ public class ListaUsuarios extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         botonVisualizar = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        botonMenuPrincipal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TxtUsuarios = new javax.swing.JTextArea();
 
@@ -51,10 +51,10 @@ public class ListaUsuarios extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("MENU PRINCIPAL");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonMenuPrincipal.setText("MENU PRINCIPAL");
+        botonMenuPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonMenuPrincipalActionPerformed(evt);
             }
         });
 
@@ -79,7 +79,7 @@ public class ListaUsuarios extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(botonVisualizar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addComponent(botonMenuPrincipal)
                         .addGap(57, 57, 57))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -91,7 +91,7 @@ public class ListaUsuarios extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(botonMenuPrincipal)
                     .addComponent(botonVisualizar))
                 .addGap(19, 19, 19))
         );
@@ -114,10 +114,10 @@ public class ListaUsuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonVisualizarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void botonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonMenuPrincipalActionPerformed
         ControladorVentanaPrincipal.mostrar();
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botonMenuPrincipalActionPerformed
 
     public void addebotonVisualizarListener(ActionListener listenControles){
         botonVisualizar.addActionListener(listenControles);
@@ -138,8 +138,8 @@ public class ListaUsuarios extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea TxtUsuarios;
+    private javax.swing.JButton botonMenuPrincipal;
     private javax.swing.JButton botonVisualizar;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
