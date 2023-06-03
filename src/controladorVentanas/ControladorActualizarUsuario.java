@@ -1,4 +1,4 @@
-git
+
 package controladorVentanas;
 
 import Vista.ActualizarUsuario;
