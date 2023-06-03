@@ -1,55 +1,54 @@
 
 package controladorVentanas;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JTextField;
-
 import Vista.AgregarUsuario;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.util.HashMap;
-import java.util.Map;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 import modelo.usuario;
 
 
 public class ControladorAgregarUsuario{
     
-    public static AgregarUsuario ventana = new AgregarUsuario();
-    
-    String nombre;
+    //ATRIBUTOS 
+    private HashMap<String, String> coleccionUsuario;
     private AgregarUsuario Vista;
     private usuario modelo;
-     
+    private JComboBox<String> listaTipoUsuario;
+    private JTextField nombre;
+    private JTextField cedula;
+    
+    
     //METODO CONSTRUCTOR
     public ControladorAgregarUsuario(usuario modelo, AgregarUsuario Vista){
         this.modelo = modelo;
         this.Vista = Vista;
         
+        this.Vista.addBotonAceptarListener(new CalculateListener());
+        this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+        this.listaTipoUsuario = this.Vista.getListaTipoUsuario();
+        this.nombre = this.Vista.getNombreUsuario();
+        this.cedula = this.Vista.getCedula();
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
-       
-        this.Vista.addBotonAceptarListener(new CalculateListener());
     }
     
     class CalculateListener implements ActionListener{
-         String palabra;
-         String nombre;
-         String tipoUsuario;
-         String cedula;
-         int IntCedula;
+         String palabra; //Palabra concatenada
+         String nombreUsuario; //Nombre de usuario
+         String tipoU; // 
+         String cc; //Identificación
          
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("ACEPTAR")){
-                nombre = Vista.nombreUsuario.getText();
-                tipoUsuario = Vista.obtenerElementoSeleccionado();
-                palabra = nombre + " " + tipoUsuario;
-                cedula = Vista.p1();
-                IntCedula = Integer.parseInt(cedula);
-                
-                modelo.coleccion.put(IntCedula,palabra);
-                System.out.println(modelo.coleccion);
-                System.out.println("LE DI A ACEPTAR");
+                nombreUsuario = nombre.getText();
+                cc = cedula.getText();
+                tipoU = (String) listaTipoUsuario.getSelectedItem();
+                palabra = nombreUsuario + " " + tipoU;
+                coleccionUsuario.put(cc, palabra);
             }   
         }  
     }
@@ -63,11 +62,6 @@ public class ControladorAgregarUsuario{
     public static void ocultar(){
         ventana.setVisible(false);
         ventana.dispose();
-    }
-
-    public void actionPerformed(ActionEvent e) {
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

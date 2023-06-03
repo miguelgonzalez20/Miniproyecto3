@@ -12,13 +12,11 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import modelo.usuario;
-/**
+/***
  *
  * @author Miguel
  */
 public class AgregarUsuario extends javax.swing.JFrame {
-
-    public String cedula;
     
     public AgregarUsuario() {
         initComponents();
@@ -203,6 +201,15 @@ public class AgregarUsuario extends javax.swing.JFrame {
         return nombreUsuario;
     }
     
+    public String obtenerElementoTipoUsuario() {
+        return (String) listaTipoUsuario.getSelectedItem();
+    }
+
+    public JTextField getCedula() {
+        return cc;
+    }
+    
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -215,4 +222,6 @@ public class AgregarUsuario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> listaTipoUsuario;
     public javax.swing.JTextField nombreUsuario;
     // End of variables declaration//GEN-END:variables
+
+  
 }
