@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import modelo.usuario;
 
@@ -20,10 +21,10 @@ import modelo.usuario;
  * @author Miguel
  */
 public class ControladorListaUsuarios {
-    
+    private HashMap<String, String> coleccionlistaUsuario;
     private ListaUsuarios Vista;
     private usuario modelo;
-     
+     private JTextArea TxtUsuarios;
     //METODO CONSTRUCTOR
     public ControladorListaUsuarios(usuario modelo, ListaUsuarios Vista){
         this.modelo = modelo;
@@ -34,13 +35,20 @@ public class ControladorListaUsuarios {
        
         this.Vista.addebotonVisualizarListener(new CalculateListener());
     }
+
+    public ControladorListaUsuarios(HashMap<String, String> coleccionlistaUsuario, JTextArea TxtUsuarios) {
+        this.coleccionlistaUsuario = coleccionlistaUsuario;
+        this.TxtUsuarios = TxtUsuarios;
+    }
     
     class CalculateListener implements ActionListener{
-         
+        
         String usuarios;
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
+                usuarios=TxtUsuarios.getText();
+                coleccionListaUsuarios.put(usuarios,);
                 StringBuilder stringBuilder = new StringBuilder();
                 
                 for (Integer key : usuario.coleccion.keySet()) {
