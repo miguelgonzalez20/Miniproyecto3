@@ -8,6 +8,7 @@ package Vista;
 import controladorVentanas.ControladorActualizarUsuario;
 import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /**
@@ -183,6 +184,12 @@ public class ActualizarUsuario extends javax.swing.JFrame {
         text = nombreUsuario.getText();
         return text;
     }
+
+    public JComboBox<String> getListaTipoUsuario() {
+        return listaTipoUsuario;
+    }
+    
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -197,4 +204,6 @@ public class ActualizarUsuario extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> listaTipoUsuario;
     private javax.swing.JTextField nombreUsuario;
     // End of variables declaration//GEN-END:variables
+
+    
 }

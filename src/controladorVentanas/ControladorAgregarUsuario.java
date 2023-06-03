@@ -24,7 +24,6 @@ public class ControladorAgregarUsuario{
     public ControladorAgregarUsuario(usuario modelo, AgregarUsuario Vista){
         this.modelo = modelo;
         this.Vista = Vista;
-        
         this.Vista.addBotonAceptarListener(new CalculateListener());
         this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.listaTipoUsuario = this.Vista.getListaTipoUsuario();
