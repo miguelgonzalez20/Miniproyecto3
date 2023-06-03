@@ -6,6 +6,7 @@ import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import modelo.prestamo;
 
@@ -15,7 +16,7 @@ public class ControladorPrestamo {
     private HashMap<String, String> coleccionPrestamo;
     
     private JTextField cedula;
-
+    private JLabel nombreUsuario;
     private VentanaPrestamo Vista;
     private prestamo prestamo;
     
@@ -25,6 +26,7 @@ public class ControladorPrestamo {
         this.Vista = Vista;
         this.coleccionPrestamo = (HashMap<String, String>) prestamo.getColeccionPrestamos();
         this.cedula = this.Vista.getCedula();
+        this.nombreUsuario = this.Vista.getNombreUsuario();
         
         this.Vista.addbotonBuscarListener(new CalculateListener()); 
         
@@ -45,6 +47,7 @@ public class ControladorPrestamo {
             prestamo.setCedula(cc);
             
             if(e.getActionCommand().equalsIgnoreCase("BUSCAR")){
+                
                 System.out.println("cedula digitada : "+ cc);
             }
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
