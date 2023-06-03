@@ -7,6 +7,7 @@ package Vista;
 import controladorVentanas.ControladorAgregarRecurso;
 import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 
 /**
@@ -108,11 +109,15 @@ public class AgregarRecurso extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(61, 61, 61)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(tipoRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jLabel2)
+                        .addGap(45, 45, 45))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tipoRecurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(35, 35, 35)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(nombreAutor, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -154,10 +159,8 @@ public class AgregarRecurso extends javax.swing.JFrame {
         botonFinalizar.addActionListener(listenControles);
     }
 
-    public String getNombreAutor() {
-        String nombre = "";
-        nombre.getText(nombreAutor);
-        return nombre;
+    public JTextField getNombreAutor() {
+        return nombreAutor;
     }
 
     public JTextField getNombreRecurso() {
@@ -166,6 +169,11 @@ public class AgregarRecurso extends javax.swing.JFrame {
     public String obtenerElementoSeleccionado() {
         return (String) tipoRecurso.getSelectedItem();
     }
+
+    public JComboBox<String> getTipoRecurso() {
+        return tipoRecurso;
+    }
+    
     
     
 

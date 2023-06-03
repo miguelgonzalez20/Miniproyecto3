@@ -1,38 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladorVentanas;
 
 import Vista.AgregarRecurso;
-import Vista.AgregarUsuario;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
+import javax.swing.JComboBox;
 import javax.swing.JTextField;
 import modelo.recurso;
-import modelo.usuario;
 
-/**
- *
- * @author Miguel
- */
 public class ControladorAgregarRecurso {
     
-    public static AgregarRecurso ventana = new AgregarRecurso();
-    private JTextField nombreAutor;
+    //ATRIBUTOS
     
-    String nombre;
+    private HashMap<String, String> coleccionRecursos;
+    private JTextField nombreAutor;
+    private JTextField nombreRecurso;
+    private JComboBox<String> tipoUsuario;
+    
     private AgregarRecurso Vista;
     private recurso modelo;
-     
+    
     //METODO CONSTRUCTOR
     public ControladorAgregarRecurso(recurso modelo, AgregarRecurso Vista){
         this.modelo = modelo;
         this.Vista = Vista;
         this.nombreAutor = this.Vista.getNombreAutor();
-                
+        this.nombreRecurso = this.Vista.getNombreRecurso();
+        this.tipoUsuario = this.Vista.getTipoRecurso();  
+        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
+        
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
        
@@ -40,27 +38,19 @@ public class ControladorAgregarRecurso {
     }
     
     class CalculateListener implements ActionListener{
-         String palabra;
-         String nombre;
-         String tipoUsuario;
-         String nombreRecurso;
-         String cedula;
-         int IntCedula;
-         
+         String palabra;  // Palabra concatenada
+         String nombreA; // nombreAutor
+         String tipoR; // Tipo Recurso
+         String nombreR; // nombreR
+
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
-                nombre = nombreAutor.getText();
-                tipoUsuario = Vista.obtenerElementoSeleccionado();
-                
-                
-                palabra = nombre + " " + tipoUsuario;
-                cedula = Vista.p1();
-                IntCedula = Integer.parseInt(cedula);
-                
-                modelo.coleccion.put(IntCedula,palabra);
-                System.out.println(modelo.coleccion);
-                System.out.println("LE DI A ACEPTAR");
+                nombreA = nombreAutor.getText();
+                nombreR = nombreRecurso.getText();
+                tipoR = (String) tipoUsuario.getSelectedItem();
+                palabra = nombreA + " " + tipoR;
+                coleccionRecursos.put(nombreR, palabra);
             }   
         }  
     }
@@ -73,5 +63,4 @@ public class ControladorAgregarRecurso {
         ventana.setVisible(false);
         ventana.dispose();
     }
-    
 }

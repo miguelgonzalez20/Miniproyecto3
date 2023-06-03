@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class recurso {
     
-    public static Map<Integer,String> coleccion = new HashMap<>();
+    public static Map<String,String> coleccionRecurso = new HashMap<>();
     
     private String nombreRecurso;
     private String autor;
@@ -38,6 +38,10 @@ public class recurso {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public static Map<String, String> getColeccionRecurso() {
+        return coleccionRecurso;
     }
     
     
