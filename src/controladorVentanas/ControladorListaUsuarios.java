@@ -5,15 +5,17 @@
  */
 package controladorVentanas;
 
-import Vista.EliminarUsuario;
 import Vista.ListaUsuarios;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
+<<<<<<< HEAD
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+=======
+>>>>>>> e2af207b5e827127d81712d069db2ceeb143eced
 import modelo.usuario;
 
 /**
