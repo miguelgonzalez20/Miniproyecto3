@@ -7,6 +7,7 @@ import controladorVentanas.ControladorListaPrestamo;
 import controladorVentanas.ControladorPrestamo;
 import java.awt.event.ActionListener;
 import javax.swing.ComboBoxModel;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 
@@ -27,7 +28,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         finalizar = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
+        nombreUsuario = new javax.swing.JLabel();
         botonModificar = new javax.swing.JButton();
         botonAgregar = new javax.swing.JButton();
         botonEliminar = new javax.swing.JButton();
@@ -53,8 +54,8 @@ public class VentanaPrestamo extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel3.setText("(NOMBRE USUARIO)");
+        nombreUsuario.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        nombreUsuario.setText("(NOMBRE USUARIO)");
 
         botonModificar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         botonModificar.setText("MODIFICAR");
@@ -120,7 +121,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                                     .addComponent(botonAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel3))
+                                .addComponent(nombreUsuario))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -143,7 +144,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(nombreUsuario))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -225,6 +226,16 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         botonModificar.addActionListener(listenControles);
     }
 
+    public void setNombreUsuario(JLabel nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public JLabel getNombreUsuario() {
+        return nombreUsuario;
+    }
+    
+    
+    
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -237,8 +248,8 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     private javax.swing.JButton finalizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel nombreUsuario;
     // End of variables declaration//GEN-END:variables
 }
