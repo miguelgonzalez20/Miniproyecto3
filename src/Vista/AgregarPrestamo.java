@@ -4,7 +4,9 @@
  */
 package Vista;
 
+import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -30,8 +32,8 @@ public class AgregarPrestamo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        nombrerecursoprestado = new javax.swing.JTextField();
-        volverRecurso1 = new javax.swing.JButton();
+        nombreRecursoPrestamo = new javax.swing.JTextField();
+        botonFinalizar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -42,17 +44,17 @@ public class AgregarPrestamo extends javax.swing.JFrame {
         jLabel1.setText("REALIZAR PRESTAMO");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        nombrerecursoprestado.addActionListener(new java.awt.event.ActionListener() {
+        nombreRecursoPrestamo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombrerecursoprestadoActionPerformed(evt);
+                nombreRecursoPrestamoActionPerformed(evt);
             }
         });
 
-        volverRecurso1.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        volverRecurso1.setText("FINALIZAR");
-        volverRecurso1.addActionListener(new java.awt.event.ActionListener() {
+        botonFinalizar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        botonFinalizar.setText("FINALIZAR");
+        botonFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                volverRecurso1ActionPerformed(evt);
+                botonFinalizarActionPerformed(evt);
             }
         });
 
@@ -76,10 +78,10 @@ public class AgregarPrestamo extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(nombrerecursoprestado, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(nombreRecursoPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(210, 210, 210)
-                        .addComponent(volverRecurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +104,9 @@ public class AgregarPrestamo extends javax.swing.JFrame {
                 .addGap(36, 36, 36)
                 .addComponent(jLabel6)
                 .addGap(4, 4, 4)
-                .addComponent(nombrerecursoprestado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(nombreRecursoPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50)
-                .addComponent(volverRecurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(35, Short.MAX_VALUE))
         );
 
@@ -122,34 +124,31 @@ public class AgregarPrestamo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void volverRecurso1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverRecurso1ActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showInputDialog("Tu prestamo ha sido exitoso tendrras que devolver la popiedad de la biblioteca en 5 dias ");
-        VentanaPrestamo principal13 = new VentanaPrestamo();
-        String autores2;// hay ya guardo el nombre escrito en el cuadro de texto.
-        //autores2 = autorprestamo.getText();
-        String nrecurso2;// hay ya guardo el nombre escrito en el cuadro de texto.
-        nrecurso2 = nombrerecursoprestado.getText();
-        principal13.setVisible(true);
-        principal13.setLocationRelativeTo(null);
-        this.dispose();
-    }//GEN-LAST:event_volverRecurso1ActionPerformed
+    private void botonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFinalizarActionPerformed
 
-    private void nombrerecursoprestadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombrerecursoprestadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nombrerecursoprestadoActionPerformed
+    }//GEN-LAST:event_botonFinalizarActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void nombreRecursoPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreRecursoPrestamoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreRecursoPrestamoActionPerformed
+
+    public JTextField getNombreRecursoPrestamo() {
+        return nombreRecursoPrestamo;
+    }
+    
+    public void addbotonFinalizarListener(ActionListener listenControles){
+        botonFinalizar.addActionListener(listenControles);
+    }
+
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonFinalizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombrerecursoprestado;
-    private javax.swing.JButton volverRecurso1;
+    private javax.swing.JTextField nombreRecursoPrestamo;
     // End of variables declaration//GEN-END:variables
 }

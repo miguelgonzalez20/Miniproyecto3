@@ -1,6 +1,8 @@
 
 package controladorVentanas;
 
+import Vista.AgregarPrestamo;
+import Vista.AgregarUsuario;
 import Vista.VentanaPrestamo;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
@@ -8,6 +10,7 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import javax.swing.JTextField;
 import modelo.prestamo;
+import modelo.usuario;
 
 public class ControladorPrestamo {
     
@@ -34,11 +37,16 @@ public class ControladorPrestamo {
         
         String cedula = cc.getText();
         
-
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
                 
+                AgregarPrestamo vista = new AgregarPrestamo();
+                prestamo modelo = new prestamo();
+                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(modelo, vista);
+       
+                ControladorVentanaUsuarios.ocultar();
+                //this.dispose();
             }
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
                 
