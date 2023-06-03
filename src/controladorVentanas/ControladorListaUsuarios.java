@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladorVentanas;
 
 import Vista.ListaUsuarios;
@@ -11,41 +7,50 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JTextArea;
+import modelo.recurso;
 import modelo.usuario;
 
-/**
- *
- * @author Miguel
- */
 public class ControladorListaUsuarios {
     
+    //ATRIBUTOS
+    private HashMap<String, String> coleccionlistaUsuario;
     private ListaUsuarios Vista;
     private usuario modelo;
-     
+    
+    private JTextArea TxtUsuarios;
+    
     //METODO CONSTRUCTOR
+    
     public ControladorListaUsuarios(usuario modelo, ListaUsuarios Vista){
         this.modelo = modelo;
         this.Vista = Vista;
+
+        this.TxtUsuarios = this.Vista.getTxtUsuarios();
+        this.coleccionlistaUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
        
-        this.Vista.addebotonVisualizarListener(new CalculateListener());
+        this.Vista.addbotonVisualizarListener(new CalculateListener());
     }
+
+    
     
     class CalculateListener implements ActionListener{
-         
-        String usuarios;
+        
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
+                System.out.println(coleccionlistaUsuario);
                 StringBuilder stringBuilder = new StringBuilder();
                 
-                for (Integer key : usuario.coleccion.keySet()) {
-                    stringBuilder.append(key).append(": ").append(usuario.coleccion.get(key)).append("\n"); 
+                for (String key : coleccionlistaUsuario.keySet()) {
+                    stringBuilder.append(key).append(": ").append(coleccionlistaUsuario.get(key)).append("\n"); 
                 }
                 String elements = stringBuilder.toString();
-                Vista.setTxtUsuarios(elements);
+                //System.out.println(elements);
+                TxtUsuarios.setText(elements);
             }   
         }  
     }
