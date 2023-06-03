@@ -28,14 +28,18 @@ public class ControladorAgregarRecurso {
         this.modelo = modelo;
         this.Vista = Vista;
         
+
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
+        
+
         this.nombreAutor = this.Vista.getNombreAutor();
         this.nombreRecurso = this.Vista.getNombreRecurso();
         this.tipoUsuario = this.Vista.getTipoRecurso();
         
         this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
         
-        Vista.setVisible(true);
-        Vista.setLocationRelativeTo(null);
+        
        
         this.Vista.addbotonFinalizarListener(new CalculateListener());
     }
