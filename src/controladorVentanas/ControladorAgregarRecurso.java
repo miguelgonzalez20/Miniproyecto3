@@ -15,6 +15,7 @@ public class ControladorAgregarRecurso {
     //ATRIBUTOS
     
     private HashMap<String, String> coleccionRecursos;
+    
     private JTextField nombreAutor;
     private JTextField nombreRecurso;
     private JComboBox<String> tipoUsuario;
@@ -27,9 +28,11 @@ public class ControladorAgregarRecurso {
         this.modelo = modelo;
         this.Vista = Vista;
         
+
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
         
+
         this.nombreAutor = this.Vista.getNombreAutor();
         this.nombreRecurso = this.Vista.getNombreRecurso();
         this.tipoUsuario = this.Vista.getTipoRecurso();  

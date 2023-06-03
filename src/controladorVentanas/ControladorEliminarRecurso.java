@@ -1,20 +1,48 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladorVentanas;
 
 import Vista.EliminarRecurso;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.HashMap;
+import javax.swing.JTextField;
+import modelo.recurso;
 
-/**
- *
- * @author Miguel
- */
 public class ControladorEliminarRecurso {
     
-    public static EliminarRecurso ventana = new EliminarRecurso();
+    private HashMap<String, String> coleccionRecursos;
+
+    private JTextField nombreRecurso;
+    private EliminarRecurso Vista;
+    private recurso modelo;
+    
+    public ControladorEliminarRecurso(recurso modelo, EliminarRecurso Vista){
+        this.modelo = modelo;
+        this.Vista = Vista;
+
+        this.nombreRecurso = this.Vista.getNombreRecurso();
+        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
+        
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
+       
+        this.Vista.addeliminarUsuarioListener(new ControladorEliminarRecurso.CalculateListener());
+    }
+    
+    class CalculateListener implements ActionListener{
+         
+         String nombreR; // nombreR
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
+                nombreR = nombreRecurso.getText();
+                coleccionRecursos.remove(nombreR);
+            }   
+        }  
+    }
+    
     
     public static void mostrar(){
         ventana.setVisible(true);

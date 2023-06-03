@@ -172,10 +172,6 @@ public class AgregarUsuario extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ccActionPerformed
     
-    public String p1(){
-        this.cedula = cc.getText();
-        return cedula;
-    }
     
     public String obtenerElementoSeleccionado() {
         return (String) listaTipoUsuario.getSelectedItem();
