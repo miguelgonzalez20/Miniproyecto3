@@ -99,6 +99,11 @@ public class VentanaPrestamo extends javax.swing.JFrame {
 
         botonBuscar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         botonBuscar.setText("BUSCAR");
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
 
         botonConsultar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         botonConsultar.setText("CONSULTAR");
@@ -112,6 +117,12 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 334, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonConsultar))
+                .addGap(119, 119, 119))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -132,19 +143,11 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                                 .addComponent(botonBuscar))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(208, 208, 208)
-                        .addComponent(jLabel1)))
-                .addContainerGap(33, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(135, 135, 135))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonConsultar))
-                        .addGap(119, 119, 119))))
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,9 +171,9 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
+                .addGap(29, 29, 29)
                 .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
+                .addGap(36, 36, 36))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -211,12 +214,29 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_botonConsultarActionPerformed
 
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBuscarActionPerformed
+
     public JTextField getCedula() {
         return cedula;
     }
     
     public void addbotonBuscarListener(ActionListener listenControles){
         botonBuscar.addActionListener(listenControles);
+    }
+    
+    public void addbotonAgregarListener(ActionListener listenControles){
+        botonAgregar.addActionListener(listenControles);
+    }
+    public void addbotonEliminarListener(ActionListener listenControles){
+        botonEliminar.addActionListener(listenControles);
+    }
+    public void addbotonConsultarListener(ActionListener listenControles){
+        botonConsultar.addActionListener(listenControles);
+    }
+    public void addbotonModificarListener(ActionListener listenControles){
+        botonModificar.addActionListener(listenControles);
     }
 
     

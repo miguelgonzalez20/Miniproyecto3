@@ -46,7 +46,7 @@ public class ControladorActualizarUsuario {
                 tipoUsuario = Vista.obtenerElementoSeleccionado();
                 cedula = Vista.getTextCC();
                 palabra = nombre + " " + tipoUsuario;
-                usuario.coleccionUsuario.put(cedula, palabra);
+                coleccionUsuario.put(cedula, palabra);
             }   
         }
         
