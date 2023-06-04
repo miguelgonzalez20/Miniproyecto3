@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.prestamo;
 import modelo.recurso;
@@ -49,6 +50,13 @@ public class ControladorPrestamo {
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
+        JOptionPane.showMessageDialog(null, 
+                 "INSTRUCCIONES\n" +
+                         "1-DESPUES DE COLOCAR TU CEDULA DA CLICK EN EL BOTON BUSCAR\n "+
+"BOTON AGREGAR: PODRAS AGREGAR LOS RECURSOS PARA EL PRESTAMO ESCRIBIENDO SU NOMBRE, SI QUIERES AGREGAR MAS DE UN RECURSO TIENES QUE REPETIR EL PROCESO CUANTOS RECURSOS QUIERAS AGREGAR\n" +
+"BOTON CONSULTAR: AQUI PODRAS CONSULTAR LOS RECURSOS QUE HAZ ESCOGIDO HASTA EL MOMENTO\n" +
+"BOTON ELIMINAR: AQUI PODRAS ELIMINAR LOS RECURSOS QUE YA HAZ ESCOGIDO ESCRIBIENDO SU NOMBRE\n" +
+"BOTON MODIFICAR:");
     }
     
     class CalculateListener implements ActionListener{

@@ -2,6 +2,7 @@
 package controladorVentanas;
 
 import Vista.*;
+import javax.swing.JOptionPane;
 
 public class ControladorVentanaPrincipal {
     
@@ -10,6 +11,7 @@ public class ControladorVentanaPrincipal {
     public static void mostrar(){
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);
+        
     }
     public static void ocultar(){
         ventana.setVisible(false);
