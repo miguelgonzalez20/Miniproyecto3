@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controladorVentanas;
 
 import Vista.EliminarUsuario;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -16,19 +11,21 @@ import modelo.usuario;
 
 public class ControladorEliminarUsuario {
     
+    //ATRIBUTOS
+    private HashMap<String, String> coleccionEliminarusuario;
+    private JTextField ccDigitada;
     private static EliminarUsuario Vista;
     private usuario modelo;
-    private JTextField ccDigitada;
-    private HashMap<String, String> coleccionEliminarusuario;
      
     //METODO CONSTRUCTOR
     public ControladorEliminarUsuario(usuario modelo, EliminarUsuario Vista){
+        
+        this.coleccionEliminarusuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+        this.ccDigitada = this.Vista.getCcDigitada();
+
         this.modelo = modelo;
         this.Vista = Vista;
 
-        this.ccDigitada = this.Vista.getCcDigitada();
-        
-        this.coleccionEliminarusuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.Vista.addeliminarUsuarioListener(new CalculateListener());
 
         Vista.setVisible(true);
@@ -46,7 +43,6 @@ public class ControladorEliminarUsuario {
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
                 cedula = ccDigitada.getText();
                 coleccionEliminarusuario.remove(cedula);
-                
             }   
         }  
     }

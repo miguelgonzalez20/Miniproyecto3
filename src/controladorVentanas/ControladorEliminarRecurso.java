@@ -9,24 +9,25 @@ import javax.swing.JTextField;
 import modelo.recurso;
 
 public class ControladorEliminarRecurso {
-    
+    //ATRIBUTOS
     private HashMap<String, String> coleccionRecursos;
-
     private JTextField nombreRecurso;
     private static EliminarRecurso Vista;
     private recurso modelo;
     
+    //METODO CONSTRUCTOR
     public ControladorEliminarRecurso(recurso modelo, EliminarRecurso Vista){
+
+        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso(); //Retorna coleccion de recursos
+        this.nombreRecurso = this.Vista.getNombreRecurso();
+        
         this.modelo = modelo;
         this.Vista = Vista;
-
-        this.nombreRecurso = this.Vista.getNombreRecurso();
-        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
+        
+        this.Vista.addeliminarUsuarioListener(new ControladorEliminarRecurso.CalculateListener());
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
-       
-        this.Vista.addeliminarUsuarioListener(new ControladorEliminarRecurso.CalculateListener());
     }
     
     class CalculateListener implements ActionListener{

@@ -2,7 +2,6 @@
 package controladorVentanas;
 
 import Vista.ListaUsuarios;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -14,24 +13,23 @@ public class ControladorListaUsuarios {
     
     //ATRIBUTOS
     private HashMap<String, String> coleccionlistaUsuario;
+    private JTextArea TxtUsuarios;
     private static ListaUsuarios Vista;
     private usuario modelo;
-    
-    private JTextArea TxtUsuarios;
-    
+
     //METODO CONSTRUCTOR
-    
     public ControladorListaUsuarios(usuario modelo, ListaUsuarios Vista){
+        
+        this.coleccionlistaUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+        this.TxtUsuarios = this.Vista.getTxtUsuarios();
+
         this.modelo = modelo;
         this.Vista = Vista;
-
-        this.TxtUsuarios = this.Vista.getTxtUsuarios();
-        this.coleccionlistaUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+       
+        this.Vista.addbotonVisualizarListener(new CalculateListener());
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
-       
-        this.Vista.addbotonVisualizarListener(new CalculateListener());
     }
 
     
@@ -41,20 +39,20 @@ public class ControladorListaUsuarios {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
-                System.out.println(coleccionlistaUsuario);
+
                 StringBuilder stringBuilder = new StringBuilder();
                 
                 for (String key : coleccionlistaUsuario.keySet()) {
                     stringBuilder.append(key).append(": ").append(coleccionlistaUsuario.get(key)).append("\n"); 
                 }
                 String elements = stringBuilder.toString();
-                //System.out.println(elements);
+                
                 TxtUsuarios.setText(elements);
             }   
         }  
     }
 
-    public static String hashMapToString(HashMap<?, ?> hashMap) {
+    /*public static String hashMapToString(HashMap<?, ?> hashMap) {
         StringBuilder sb = new StringBuilder();
 
         for (Map.Entry<?, ?> entry : hashMap.entrySet()) {
@@ -67,7 +65,7 @@ public class ControladorListaUsuarios {
         }
 
         return sb.toString();
-    }
+    }*/
     
     public static void mostrar(){
         Vista.setVisible(true);
@@ -77,10 +75,4 @@ public class ControladorListaUsuarios {
         Vista.setVisible(false);
         Vista.dispose();
     }
-
-    public void actionPerformed(ActionEvent e) {
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

@@ -1,4 +1,5 @@
 package controladorVentanas;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.AgregarUsuario;
@@ -12,22 +13,25 @@ public class ControladorAgregarUsuario{
     
     //ATRIBUTOS 
     private HashMap<String, String> coleccionUsuario;
-    private static AgregarUsuario Vista;
-    private usuario modelo;
     private JComboBox<String> listaTipoUsuario;
     private JTextField nombre;
     private JTextField cedula;
-    
-    
+    private static AgregarUsuario Vista;
+    private usuario modelo;
+
     //METODO CONSTRUCTOR
     public ControladorAgregarUsuario(usuario modelo, AgregarUsuario Vista){
-        this.modelo = modelo;
-        this.Vista = Vista;
-        this.Vista.addBotonAceptarListener(new CalculateListener());
+        
         this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.listaTipoUsuario = this.Vista.getListaTipoUsuario();
         this.nombre = this.Vista.getNombreUsuario();
         this.cedula = this.Vista.getCedula();
+        
+        this.Vista = Vista;
+        this.modelo = modelo;
+        
+        this.Vista.addBotonAceptarListener(new CalculateListener());
+        
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
     }
