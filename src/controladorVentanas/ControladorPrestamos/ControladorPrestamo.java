@@ -2,6 +2,7 @@
 package controladorVentanas.ControladorPrestamos;
 
 import Vista.Prestamo.AgregarPrestamo;
+import Vista.Prestamo.EliminarPrestamo;
 import Vista.Prestamo.VentanaPrestamo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,7 +25,7 @@ public class ControladorPrestamo {
     private static VentanaPrestamo Vista;
     private prestamo prestamo;
     
-    private static ArrayList<String> ArrayListPrestamos; // Array
+    private static ArrayList<String> ArrayListPrestamos1 = new ArrayList<>(); // Array
     
     //METODO CONSTRUCTOR
     public ControladorPrestamo(prestamo prestamo, VentanaPrestamo Vista, usuario usuario){
@@ -37,7 +38,7 @@ public class ControladorPrestamo {
         this.cedula = this.Vista.getCedula();
         this.nombreUsuario = this.Vista.getNombreUsuario();
         
-        this.ArrayListPrestamos = ArrayListPrestamos;
+        //this.ArrayListPrestamos1 = ArrayListPrestamos;
         
         this.Vista.addbotonFinalizarListener(new CalculateListener());
         this.Vista.addbotonBuscarListener(new CalculateListener());  
@@ -66,23 +67,27 @@ public class ControladorPrestamo {
                 Vista.setVisible(false);
                 AgregarPrestamo vista = new AgregarPrestamo();
                 recurso recursos = new recurso();
-                prestamo prestamo = new prestamo();
-                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos,prestamo, vista, cc,ArrayListPrestamos);
+                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos, vista, cc,ArrayListPrestamos1);
                 
                 System.out.println("le di agregar");
                 
             }
-            if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
-                
-            }
             if(e.getActionCommand().equalsIgnoreCase("CONSULTAR")){
                 
+                
+            }
+            if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
+                Vista.setVisible(false);
+                EliminarPrestamo vista = new EliminarPrestamo();
+                recurso recursos = new recurso();
+                ControladorEliminarPrestamo controlador = new ControladorEliminarPrestamo(recursos, vista, ArrayListPrestamos1);
+
             }
             if(e.getActionCommand().equalsIgnoreCase("MODIFICAR")){
                 
             }
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR PRESTAMO")){
-                coleccionPrestamo.put(cc,ArrayListPrestamos);
+                coleccionPrestamo.put(cc,ArrayListPrestamos1);
                 
                 System.out.println("le di finalizar");
                 System.out.println(coleccionPrestamo.get(cc));
@@ -103,11 +108,11 @@ public class ControladorPrestamo {
     }
 
     public ArrayList<String> getArrayListPrestamos() {
-        return ArrayListPrestamos;
+        return ArrayListPrestamos1;
     }
 
     public static void setArrayListPrestamos(ArrayList<String> nombreArray) {
-        ArrayListPrestamos = nombreArray;
+        ArrayListPrestamos1 = nombreArray;
     }
     
     
