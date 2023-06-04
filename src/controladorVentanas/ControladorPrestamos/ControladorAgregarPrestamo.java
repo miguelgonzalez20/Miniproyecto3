@@ -66,7 +66,7 @@ public class ControladorAgregarPrestamo {
                     //cadenaRecursos = cadenaRecursos + " / " + nombreRecurso;
                     //coleccionPrestamos.put(cedula,Cadena);
                     //prestamo.setCadenaRecursos(Cadena);
-                    ArrayListPrestamos.add(nombreRecurso);
+                    ArrayListPrestamos.add(nombreRecurso);//LUGAR DONDE DICE QUE ESTA EL ERROR
                     ControladorPrestamo.setArrayListPrestamos(ArrayListPrestamos);
                 }
                 ControladorPrestamo.mostrar();
