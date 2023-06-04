@@ -185,6 +185,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
         ControladorAgregarPrestamo.mostrar();
         ControladorPrestamo.ocultar();
+        this.dispose();
     }//GEN-LAST:event_botonAgregarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed

@@ -16,29 +16,30 @@ import modelo.usuario;
 
 public class ControladorAgregarPrestamo {
     
-    //ATRIBUTOS 
-    private HashMap<String, String> coleccionPrestamo;
-    private HashMap<String, String> coleccionUsuario;
+    //ATRIBUTOS
+    private String cadenaRecursos;
+    private HashMap<String, String> coleccionPrestamos;
+    private HashMap<String, String> coleccionRecursos;
     private JComboBox<String> comboBox;
-    
-    private JTextField nombreRecurso;
     private JLabel nombreUsuario;
-    
+    private JTextField nombreRecursoDigitado;
     private AgregarPrestamo Vista;
     private prestamo prestamo;
+    private recurso recursos;
+    private String cedula;
 
     //METODO CONSTRUCTOR
-    public ControladorAgregarPrestamo(prestamo modelo, AgregarPrestamo Vista, usuario usuario, recurso recurso){
+    public ControladorAgregarPrestamo(recurso recursos, prestamo prestamo, AgregarPrestamo Vista, String cc){
+        this.cadenaRecursos = " ";
         this.prestamo = prestamo;
         this.Vista = Vista;
-        this.coleccionPrestamo = (HashMap<String, String>) prestamo.getColeccionPrestamos();
-        this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
-        this.comboBox = this.Vista.getjComboBox1();
+        this.recursos = recursos;
+        this.nombreRecursoDigitado = Vista.getNombreRecurso();
+        this.coleccionPrestamos = (HashMap<String, String>) prestamo.getColeccionPrestamos();
+        this.coleccionRecursos = (HashMap<String, String>) recursos.getColeccionRecurso();
         this.nombreUsuario = this.Vista.getNombreUsuario();
-        
-        
+        this.cedula = cc;
         this.Vista.addbotonFinalizarListener(new CalculateListener());
-        this.Vista.addbotonVisualizarRecursosListener(new CalculateListener()); 
 
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
@@ -49,13 +50,22 @@ public class ControladorAgregarPrestamo {
          
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR RECURSOS")){
-                Vista.setjComboBox1(comboBox);
-            } 
+            System.out.println(cadenaRecursos);
+
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
-                //nombreRecurso = nombreRecursoPrestamo.getText();
+                String nombreRecurso = nombreRecursoDigitado.getText();
+  
+                if(coleccionRecursos.get(nombreRecurso)== null){
+                    System.out.println("no existe");
+                }
+                else{
+                    cadenaRecursos = cadenaRecursos + " / " + nombreRecurso;
+                    coleccionPrestamos.put(cedula,cadenaRecursos);
+                    ocultar();
+                    ControladorPrestamo.mostrar();
+                }
+                System.out.println(coleccionPrestamos.get(cedula));
                 
-                coleccionPrestamo.put(nombreRecurso,nombreRecurso);
             }   
         }  
     }

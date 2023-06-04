@@ -1,6 +1,8 @@
 
 package controladorVentanas;
 
+import Vista.AgregarPrestamo;
+import Vista.AgregarRecurso;
 import Vista.VentanaPrestamo;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
@@ -9,6 +11,7 @@ import java.util.HashMap;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import modelo.prestamo;
+import modelo.recurso;
 import modelo.usuario;
 
 public class ControladorPrestamo {
@@ -58,6 +61,11 @@ public class ControladorPrestamo {
                 
             }
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
+                AgregarPrestamo vista = new AgregarPrestamo();
+                recurso recursos = new recurso();
+                prestamo prestamo = new prestamo();
+                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos,prestamo, vista, cc);
+                //this.dispose();
                 
                 System.out.println("le di agregar");
                 
@@ -80,9 +88,7 @@ public class ControladorPrestamo {
             
         }  
     }
-    
-    
-    
+
     public static void mostrar(){
         ventana.setVisible(true);
         ventana.setLocationRelativeTo(null);

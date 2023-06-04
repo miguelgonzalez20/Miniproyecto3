@@ -18,8 +18,8 @@ public class ControladorAgregarRecurso {
     
     private JTextField nombreAutor;
     private JTextField nombreRecurso;
-    private JComboBox<String> tipoUsuario;
-    
+    private JComboBox<String> tipoRecurso;
+
     private AgregarRecurso Vista;
     private recurso modelo;
     
@@ -27,21 +27,19 @@ public class ControladorAgregarRecurso {
     public ControladorAgregarRecurso(recurso modelo, AgregarRecurso Vista){
         this.modelo = modelo;
         this.Vista = Vista;
-        
-
-        Vista.setVisible(true);
-        Vista.setLocationRelativeTo(null);
-        
 
         this.nombreAutor = this.Vista.getNombreAutor();
         this.nombreRecurso = this.Vista.getNombreRecurso();
-        this.tipoUsuario = this.Vista.getTipoRecurso();
+        
+        this.tipoRecurso = this.Vista.getTipoRecurso();
         
         this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
-        
-        
        
         this.Vista.addbotonFinalizarListener(new CalculateListener());
+        
+        
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     
     class CalculateListener implements ActionListener{
@@ -55,9 +53,7 @@ public class ControladorAgregarRecurso {
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
                 nombreA = nombreAutor.getText();
                 nombreR = nombreRecurso.getText();
-                modelo.agregarItem(nombreR);
-                
-                tipoR = (String) tipoUsuario.getSelectedItem();
+                tipoR = (String) tipoRecurso.getSelectedItem();
                 palabra = nombreA + " " + tipoR;
                 coleccionRecursos.put(nombreR, palabra);
             }   
