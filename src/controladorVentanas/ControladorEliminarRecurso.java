@@ -2,7 +2,6 @@
 package controladorVentanas;
 
 import Vista.EliminarRecurso;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -14,7 +13,7 @@ public class ControladorEliminarRecurso {
     private HashMap<String, String> coleccionRecursos;
 
     private JTextField nombreRecurso;
-    private EliminarRecurso Vista;
+    private static EliminarRecurso Vista;
     private recurso modelo;
     
     public ControladorEliminarRecurso(recurso modelo, EliminarRecurso Vista){
@@ -45,12 +44,12 @@ public class ControladorEliminarRecurso {
     
     
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

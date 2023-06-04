@@ -8,14 +8,13 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JTextArea;
-import modelo.recurso;
 import modelo.usuario;
 
 public class ControladorListaUsuarios {
     
     //ATRIBUTOS
     private HashMap<String, String> coleccionlistaUsuario;
-    private ListaUsuarios Vista;
+    private static ListaUsuarios Vista;
     private usuario modelo;
     
     private JTextArea TxtUsuarios;
@@ -71,12 +70,12 @@ public class ControladorListaUsuarios {
     }
     
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
 
     public void actionPerformed(ActionEvent e) {

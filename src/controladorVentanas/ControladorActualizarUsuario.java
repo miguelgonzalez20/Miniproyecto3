@@ -2,7 +2,6 @@
 package controladorVentanas;
 
 import Vista.ActualizarUsuario;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -16,7 +15,7 @@ public class ControladorActualizarUsuario {
     private String nombre;
     private String cedula;
     private JComboBox<String> listaTipoUsuario;
-    private ActualizarUsuario Vista;
+    private static ActualizarUsuario Vista;
     private usuario modelo;
      
     //METODO CONSTRUCTOR
@@ -54,12 +53,12 @@ public class ControladorActualizarUsuario {
     }
     
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

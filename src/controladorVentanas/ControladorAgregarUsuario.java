@@ -2,7 +2,6 @@ package controladorVentanas;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Vista.AgregarUsuario;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.util.HashMap;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -13,7 +12,7 @@ public class ControladorAgregarUsuario{
     
     //ATRIBUTOS 
     private HashMap<String, String> coleccionUsuario;
-    private AgregarUsuario Vista;
+    private static AgregarUsuario Vista;
     private usuario modelo;
     private JComboBox<String> listaTipoUsuario;
     private JTextField nombre;
@@ -55,12 +54,12 @@ public class ControladorAgregarUsuario{
  
     
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

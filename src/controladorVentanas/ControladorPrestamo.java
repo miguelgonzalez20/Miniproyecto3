@@ -2,9 +2,8 @@
 package controladorVentanas;
 
 import Vista.AgregarPrestamo;
-import Vista.AgregarRecurso;
 import Vista.VentanaPrestamo;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
+//import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -22,7 +21,7 @@ public class ControladorPrestamo {
     
     private JTextField cedula;
     private JLabel nombreUsuario;
-    private VentanaPrestamo Vista;
+    private static VentanaPrestamo Vista;
     private prestamo prestamo;
     
     //METODO CONSTRUCTOR
@@ -56,25 +55,17 @@ public class ControladorPrestamo {
                 nombreUsuario.setText(coleccionUsuario.get(cc));
                 System.out.println("cedula digitada : "+ cc);
                 System.out.println(coleccionUsuario.get(cc));
-                
-                
-                
+  
             }
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
+                Vista.setVisible(false);
                 AgregarPrestamo vista = new AgregarPrestamo();
                 recurso recursos = new recurso();
                 prestamo prestamo = new prestamo();
                 ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos,prestamo, vista, cc);
-                //this.dispose();
                 
                 System.out.println("le di agregar");
                 
-                /*AgregarPrestamo vista = new AgregarPrestamo();
-                prestamo modelo = new prestamo();
-                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(modelo, vista);
-       
-                ControladorVentanaUsuarios.ocultar();
-                //this.dispose();*/
             }
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
                 
@@ -90,12 +81,12 @@ public class ControladorPrestamo {
     }
 
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

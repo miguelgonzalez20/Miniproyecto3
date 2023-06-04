@@ -123,6 +123,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void BotonUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonUsuarioActionPerformed
         ControladorVentanaUsuarios.mostrar();
         ControladorVentanaPrincipal.ocultar();
+        this.dispose();
     }//GEN-LAST:event_BotonUsuarioActionPerformed
 
     private void botonRecursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonRecursoActionPerformed

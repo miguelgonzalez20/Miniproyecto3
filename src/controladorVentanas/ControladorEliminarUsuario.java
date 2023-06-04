@@ -5,7 +5,6 @@
  */
 package controladorVentanas;
 
-import Vista.AgregarUsuario;
 import Vista.EliminarUsuario;
 import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
@@ -17,7 +16,7 @@ import modelo.usuario;
 
 public class ControladorEliminarUsuario {
     
-    private EliminarUsuario Vista;
+    private static EliminarUsuario Vista;
     private usuario modelo;
     private JTextField ccDigitada;
     private HashMap<String, String> coleccionEliminarusuario;
@@ -55,17 +54,12 @@ public class ControladorEliminarUsuario {
  
     
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
-    }
-
-    public void actionPerformed(ActionEvent e) {
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

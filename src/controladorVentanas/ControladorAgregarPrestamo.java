@@ -2,8 +2,6 @@
 package controladorVentanas;
 
 import Vista.AgregarPrestamo;
-import Vista.VentanaPrestamo;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -12,25 +10,24 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import modelo.prestamo;
 import modelo.recurso;
-import modelo.usuario;
 
 public class ControladorAgregarPrestamo {
     
     //ATRIBUTOS
-    private String cadenaRecursos;
+    private String cadenaRecursos = " ";
     private HashMap<String, String> coleccionPrestamos;
     private HashMap<String, String> coleccionRecursos;
     private JComboBox<String> comboBox;
     private JLabel nombreUsuario;
     private JTextField nombreRecursoDigitado;
-    private AgregarPrestamo Vista;
+    private static AgregarPrestamo Vista;
     private prestamo prestamo;
     private recurso recursos;
     private String cedula;
 
     //METODO CONSTRUCTOR
     public ControladorAgregarPrestamo(recurso recursos, prestamo prestamo, AgregarPrestamo Vista, String cc){
-        this.cadenaRecursos = " ";
+        
         this.prestamo = prestamo;
         this.Vista = Vista;
         this.recursos = recursos;
@@ -47,23 +44,27 @@ public class ControladorAgregarPrestamo {
     
     class CalculateListener implements ActionListener{
          String nombreRecurso;
+         String Cadena;
          
         @Override
         public void actionPerformed(ActionEvent e) {
-            System.out.println(cadenaRecursos);
+            System.out.println("CADENA DE RECURSOS ACTUAL : " + cadenaRecursos);
 
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
-                String nombreRecurso = nombreRecursoDigitado.getText();
+                nombreRecurso = nombreRecursoDigitado.getText();
   
                 if(coleccionRecursos.get(nombreRecurso)== null){
                     System.out.println("no existe");
                 }
                 else{
-                    cadenaRecursos = cadenaRecursos + " / " + nombreRecurso;
-                    coleccionPrestamos.put(cedula,cadenaRecursos);
-                    ocultar();
-                    ControladorPrestamo.mostrar();
+                    Cadena = prestamo.getCadenaRecursos() + " / " + nombreRecurso;
+                    
+                    //cadenaRecursos = cadenaRecursos + " / " + nombreRecurso;
+                    coleccionPrestamos.put(cedula,Cadena);
+                    prestamo.setCadenaRecursos(Cadena);
                 }
+                ControladorPrestamo.mostrar();
+                Vista.setVisible(false);
                 System.out.println(coleccionPrestamos.get(cedula));
                 
             }   
@@ -71,12 +72,12 @@ public class ControladorAgregarPrestamo {
     }
 
     public static void mostrar(){
-        ventana.setVisible(true);
-        ventana.setLocationRelativeTo(null);
+        Vista.setVisible(true);
+        Vista.setLocationRelativeTo(null);
     }
     public static void ocultar(){
-        ventana.setVisible(false);
-        ventana.dispose();
+        Vista.setVisible(false);
+        Vista.dispose();
     }
     
 }

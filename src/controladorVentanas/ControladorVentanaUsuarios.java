@@ -2,7 +2,6 @@
 package controladorVentanas;
 
 import Vista.VentanaUsuarios;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 
 public class ControladorVentanaUsuarios {
     

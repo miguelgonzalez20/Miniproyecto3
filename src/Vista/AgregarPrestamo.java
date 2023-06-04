@@ -125,10 +125,10 @@ public class AgregarPrestamo extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFinalizarActionPerformed
-        
+        /*
         ControladorAgregarPrestamo.ocultar();
         this.dispose();
-        ControladorPrestamo.mostrar();
+        ControladorPrestamo.mostrar();*/
         
     }//GEN-LAST:event_botonFinalizarActionPerformed
 

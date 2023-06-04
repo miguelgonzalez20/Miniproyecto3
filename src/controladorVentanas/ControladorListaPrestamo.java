@@ -6,7 +6,6 @@
 package controladorVentanas;
 
 import Vista.ListaPrestamo;
-import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 
 /**
  *
