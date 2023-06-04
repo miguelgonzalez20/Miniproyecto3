@@ -21,14 +21,14 @@ public class ControladorAgregarUsuario{
 
     //METODO CONSTRUCTOR
     public ControladorAgregarUsuario(usuario modelo, AgregarUsuario Vista){
-        
+        this.Vista = Vista;
+        this.modelo = modelo;
         this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.listaTipoUsuario = this.Vista.getListaTipoUsuario();
         this.nombre = this.Vista.getNombreUsuario();
         this.cedula = this.Vista.getCedula();
         
-        this.Vista = Vista;
-        this.modelo = modelo;
+        
         
         this.Vista.addBotonAceptarListener(new CalculateListener());
         

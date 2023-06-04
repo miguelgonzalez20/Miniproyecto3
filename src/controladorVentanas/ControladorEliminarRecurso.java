@@ -17,13 +17,13 @@ public class ControladorEliminarRecurso {
     
     //METODO CONSTRUCTOR
     public ControladorEliminarRecurso(recurso modelo, EliminarRecurso Vista){
-
-        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso(); //Retorna coleccion de recursos
-        this.nombreRecurso = this.Vista.getNombreRecurso();
         
         this.modelo = modelo;
         this.Vista = Vista;
         
+        this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso(); //Retorna coleccion de recursos
+        this.nombreRecurso = this.Vista.getNombreRecurso();
+ 
         this.Vista.addeliminarUsuarioListener(new ControladorEliminarRecurso.CalculateListener());
         
         Vista.setVisible(true);

@@ -22,15 +22,14 @@ public class ControladorAgregarRecurso {
     
     //METODO CONSTRUCTOR
     public ControladorAgregarRecurso(recurso modelo, AgregarRecurso Vista){
+        this.modelo = modelo;
+        this.Vista = Vista;
         this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
         this.tipoRecurso = this.Vista.getTipoRecurso(); // Metodo que retorna un JcomboBox
 
         this.nombreAutor = this.Vista.getNombreAutor();
         this.nombreRecurso = this.Vista.getNombreRecurso();
 
-        this.modelo = modelo;
-        this.Vista = Vista;
-       
         this.Vista.addbotonFinalizarListener(new CalculateListener());
         
         Vista.setVisible(true);

@@ -18,11 +18,12 @@ public class ControladorListaRecursos {
     //METODO CONSTRUCTOR
     public ControladorListaRecursos(recurso modelo, ListaRecursos Vista){
         
+        this.modelo = modelo;
+        this.Vista = Vista;
         this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
         this.listaRecursos = this.Vista.getListaRecursos();
 
-        this.modelo = modelo;
-        this.Vista = Vista;
+        
 
         this.Vista.addbotonVisualizarListener(new CalculateListener());
         

@@ -20,11 +20,12 @@ public class ControladorListaUsuarios {
     //METODO CONSTRUCTOR
     public ControladorListaUsuarios(usuario modelo, ListaUsuarios Vista){
         
+        this.modelo = modelo;
+        this.Vista = Vista;
         this.coleccionlistaUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.TxtUsuarios = this.Vista.getTxtUsuarios();
 
-        this.modelo = modelo;
-        this.Vista = Vista;
+        
        
         this.Vista.addbotonVisualizarListener(new CalculateListener());
         

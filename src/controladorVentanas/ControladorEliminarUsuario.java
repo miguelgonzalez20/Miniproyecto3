@@ -20,11 +20,10 @@ public class ControladorEliminarUsuario {
     //METODO CONSTRUCTOR
     public ControladorEliminarUsuario(usuario modelo, EliminarUsuario Vista){
         
-        this.coleccionEliminarusuario = (HashMap<String, String>) usuario.getColeccionUsuario();
-        this.ccDigitada = this.Vista.getCcDigitada();
-
         this.modelo = modelo;
         this.Vista = Vista;
+        this.coleccionEliminarusuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+        this.ccDigitada = this.Vista.getCcDigitada();
 
         this.Vista.addeliminarUsuarioListener(new CalculateListener());
 

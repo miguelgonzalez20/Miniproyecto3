@@ -20,13 +20,14 @@ public class ControladorActualizarUsuario {
      
     //METODO CONSTRUCTOR
     public ControladorActualizarUsuario(usuario modelo, ActualizarUsuario Vista){
+        this.modelo = modelo;
+        this.Vista = Vista;
         
         this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         this.listaTipoUsuario = this.Vista.getListaTipoUsuario();
         this.nombre = this.Vista.getTextNuevoNombre();
         this.cedula = this.Vista.getTextCC();
-        this.modelo = modelo;
-        this.Vista = Vista;
+        
 
         this.Vista.addebotonFinalizarListener(new CalculateListener());
         
