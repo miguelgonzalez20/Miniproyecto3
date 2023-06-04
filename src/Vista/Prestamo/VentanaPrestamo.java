@@ -27,7 +27,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        finalizar = new javax.swing.JButton();
+        botonFinalizar = new javax.swing.JButton();
         nombreUsuario = new javax.swing.JLabel();
         botonModificar = new javax.swing.JButton();
         botonAgregar = new javax.swing.JButton();
@@ -46,11 +46,11 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel2.setText("CC:");
 
-        finalizar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        finalizar.setText("FINALIZAR PRESTAMO");
-        finalizar.addActionListener(new java.awt.event.ActionListener() {
+        botonFinalizar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        botonFinalizar.setText("FINALIZAR PRESTAMO");
+        botonFinalizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finalizarActionPerformed(evt);
+                botonFinalizarActionPerformed(evt);
             }
         });
 
@@ -133,7 +133,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(143, 143, 143)
-                        .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -159,7 +159,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
                     .addComponent(botonEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
-                .addComponent(finalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
         );
 
@@ -177,9 +177,9 @@ public class VentanaPrestamo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void finalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarActionPerformed
+    private void botonFinalizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonFinalizarActionPerformed
 
-    }//GEN-LAST:event_finalizarActionPerformed
+    }//GEN-LAST:event_botonFinalizarActionPerformed
 
         
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
@@ -226,6 +226,10 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     public void addbotonModificarListener(ActionListener listenControles){
         botonModificar.addActionListener(listenControles);
     }
+    
+    public void addbotonFinalizarListener(ActionListener listenControles){
+        botonFinalizar.addActionListener(listenControles);
+    }
 
     public void setNombreUsuario(JLabel nombreUsuario) {
         this.nombreUsuario = nombreUsuario;
@@ -244,9 +248,9 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     private javax.swing.JButton botonBuscar;
     private javax.swing.JButton botonConsultar;
     private javax.swing.JButton botonEliminar;
+    private javax.swing.JButton botonFinalizar;
     private javax.swing.JButton botonModificar;
     private javax.swing.JTextField cedula;
-    private javax.swing.JButton finalizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;

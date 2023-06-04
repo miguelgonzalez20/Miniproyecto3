@@ -1,13 +1,15 @@
 
 package modelo;
 
+import java.awt.List;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 public class prestamo {
     
     //ATRIBUTOS
-    private static Map<String,String> coleccionPrestamos = new HashMap<>();
+    private static Map< String, ArrayList<String> > coleccionPrestamos = new HashMap<>();
     private String cedula;
     private String cadenaRecursos;
     
@@ -16,7 +18,6 @@ public class prestamo {
     }
     
     //METODOS
-
     public String getCadenaRecursos() {
         return cadenaRecursos;
     }
@@ -25,8 +26,8 @@ public class prestamo {
         this.cadenaRecursos = cadenaRecursos;
     }
     
-    
-    public static Map<String, String> getColeccionPrestamos() {
+    //Retorna mi HashMap de prestamos
+    public static Map<String, ArrayList<String>> getColeccionPrestamos() {
         return coleccionPrestamos;
     }
 

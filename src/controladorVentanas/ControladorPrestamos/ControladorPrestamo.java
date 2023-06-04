@@ -3,9 +3,9 @@ package controladorVentanas.ControladorPrestamos;
 
 import Vista.Prestamo.AgregarPrestamo;
 import Vista.Prestamo.VentanaPrestamo;
-//import static controladorVentanas.ControladorVentanaPrincipal.ventana;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
@@ -16,7 +16,7 @@ import modelo.usuario;
 public class ControladorPrestamo {
 
     //ATRIBUTOS
-    private HashMap<String, String> coleccionPrestamo;
+    private HashMap<String, ArrayList<String>> coleccionPrestamo;
     private HashMap<String, String> coleccionUsuario;
     
     private JTextField cedula;
@@ -24,18 +24,23 @@ public class ControladorPrestamo {
     private static VentanaPrestamo Vista;
     private prestamo prestamo;
     
+    private static ArrayList<String> ArrayListPrestamos; // Array
+    
     //METODO CONSTRUCTOR
     public ControladorPrestamo(prestamo prestamo, VentanaPrestamo Vista, usuario usuario){
         this.prestamo = prestamo;
         this.Vista = Vista;
-        this.coleccionPrestamo = (HashMap<String, String>) prestamo.getColeccionPrestamos();
+        
+        this.coleccionPrestamo = (HashMap<String, ArrayList<String> >) prestamo.getColeccionPrestamos();
         this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
         
         this.cedula = this.Vista.getCedula();
         this.nombreUsuario = this.Vista.getNombreUsuario();
         
-        this.Vista.addbotonBuscarListener(new CalculateListener()); 
+        this.ArrayListPrestamos = ArrayListPrestamos;
         
+        this.Vista.addbotonFinalizarListener(new CalculateListener());
+        this.Vista.addbotonBuscarListener(new CalculateListener());  
         this.Vista.addbotonAgregarListener(new CalculateListener());
         this.Vista.addbotonEliminarListener(new CalculateListener());
         this.Vista.addbotonConsultarListener(new CalculateListener());
@@ -62,7 +67,7 @@ public class ControladorPrestamo {
                 AgregarPrestamo vista = new AgregarPrestamo();
                 recurso recursos = new recurso();
                 prestamo prestamo = new prestamo();
-                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos,prestamo, vista, cc);
+                ControladorAgregarPrestamo controlador = new ControladorAgregarPrestamo(recursos,prestamo, vista, cc,ArrayListPrestamos);
                 
                 System.out.println("le di agregar");
                 
@@ -76,11 +81,19 @@ public class ControladorPrestamo {
             if(e.getActionCommand().equalsIgnoreCase("MODIFICAR")){
                 
             }
+            if(e.getActionCommand().equalsIgnoreCase("FINALIZAR PRESTAMO")){
+                coleccionPrestamo.put(cc,ArrayListPrestamos);
+                
+                System.out.println("le di finalizar");
+                System.out.println(coleccionPrestamo.get(cc));
+                
+            }
             
         }  
     }
 
     public static void mostrar(){
+        
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
     }
@@ -88,5 +101,14 @@ public class ControladorPrestamo {
         Vista.setVisible(false);
         Vista.dispose();
     }
+
+    public ArrayList<String> getArrayListPrestamos() {
+        return ArrayListPrestamos;
+    }
+
+    public static void setArrayListPrestamos(ArrayList<String> nombreArray) {
+        ArrayListPrestamos = nombreArray;
+    }
+    
     
 }
