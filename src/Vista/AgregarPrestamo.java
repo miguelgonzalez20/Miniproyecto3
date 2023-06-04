@@ -5,6 +5,8 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -18,6 +20,7 @@ public class AgregarPrestamo extends javax.swing.JFrame {
      * Creates new form AgregarRecurso
      */
     public AgregarPrestamo() {
+        
         initComponents();
     }
 
@@ -32,23 +35,18 @@ public class AgregarPrestamo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        nombreRecursoPrestamo = new javax.swing.JTextField();
         botonFinalizar = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        nombreUsuario = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        botonVisualizarRecursos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 24)); // NOI18N
         jLabel1.setText("REALIZAR PRESTAMO");
         jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        nombreRecursoPrestamo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nombreRecursoPrestamoActionPerformed(evt);
-            }
-        });
 
         botonFinalizar.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         botonFinalizar.setText("FINALIZAR");
@@ -58,8 +56,8 @@ public class AgregarPrestamo extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
-        jLabel5.setText("(NOMBRE DE USUARIO)");
+        nombreUsuario.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        nombreUsuario.setText("(NOMBRE DE USUARIO)");
 
         jLabel6.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel6.setText("NOMBRE DE RECURSO:");
@@ -67,30 +65,46 @@ public class AgregarPrestamo extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
         jLabel7.setText("USUARIO: ");
 
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
+        botonVisualizarRecursos.setFont(new java.awt.Font("Arial Black", 0, 18)); // NOI18N
+        botonVisualizarRecursos.setText("VISUALIZAR RECURSOS");
+        botonVisualizarRecursos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVisualizarRecursosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(nombreRecursoPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5))
-                            .addComponent(jLabel6))))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(botonVisualizarRecursos, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(180, 180, 180)
+                            .addComponent(jLabel1))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(167, 167, 167)
+                            .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(90, 90, 90)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel7)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(nombreUsuario))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGap(261, 261, 261)
+                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel6)))))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,14 +114,16 @@ public class AgregarPrestamo extends javax.swing.JFrame {
                 .addGap(41, 41, 41)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel5))
+                    .addComponent(nombreUsuario))
                 .addGap(36, 36, 36)
-                .addComponent(jLabel6)
-                .addGap(4, 4, 4)
-                .addComponent(nombreRecursoPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(botonFinalizar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(botonVisualizarRecursos)
+                .addGap(28, 28, 28)
+                .addComponent(botonFinalizar)
+                .addGap(23, 23, 23))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,27 +144,45 @@ public class AgregarPrestamo extends javax.swing.JFrame {
 
     }//GEN-LAST:event_botonFinalizarActionPerformed
 
-    private void nombreRecursoPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreRecursoPrestamoActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nombreRecursoPrestamoActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
-    public JTextField getNombreRecursoPrestamo() {
-        return nombreRecursoPrestamo;
-    }
+    private void botonVisualizarRecursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVisualizarRecursosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVisualizarRecursosActionPerformed
+
+    
     
     public void addbotonFinalizarListener(ActionListener listenControles){
         botonFinalizar.addActionListener(listenControles);
     }
+    public void addbotonVisualizarRecursosListener(ActionListener listenControles){
+        botonVisualizarRecursos.addActionListener(listenControles);
+    }
 
+    public JLabel getNombreUsuario() {
+        return nombreUsuario;
+    }
+
+    public JComboBox<String> getjComboBox1() {
+        return jComboBox1;
+    }
+
+    public void setjComboBox1(JComboBox<String> jComboBox1) {
+        this.jComboBox1 = jComboBox1;
+    }
+    
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonFinalizar;
+    private javax.swing.JButton botonVisualizarRecursos;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField nombreRecursoPrestamo;
+    private javax.swing.JLabel nombreUsuario;
     // End of variables declaration//GEN-END:variables
 }

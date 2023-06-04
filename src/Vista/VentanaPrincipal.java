@@ -12,6 +12,7 @@ import controladorVentanas.ControladorVentanaRecurso;
 import controladorVentanas.ControladorVentanaUsuarios;
 import modelo.prestamo;
 import modelo.recurso;
+import modelo.usuario;
 
 /**
  *
@@ -133,9 +134,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
     private void botonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPrestamoActionPerformed
         VentanaPrestamo vista = new VentanaPrestamo();
         prestamo modelo = new prestamo();
-        ControladorPrestamo controlador = new ControladorPrestamo(modelo, vista);
+        usuario usuario = new usuario();
+        ControladorPrestamo controlador = new ControladorPrestamo(modelo, vista,usuario);
         this.dispose();
-
     }//GEN-LAST:event_botonPrestamoActionPerformed
 
 

@@ -202,7 +202,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     }//GEN-LAST:event_botonConsultarActionPerformed
 
     private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_botonBuscarActionPerformed
 
     public JTextField getCedula() {

@@ -9,11 +9,13 @@ import java.util.HashMap;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import modelo.prestamo;
+import modelo.usuario;
 
 public class ControladorPrestamo {
 
     //ATRIBUTOS
     private HashMap<String, String> coleccionPrestamo;
+    private HashMap<String, String> coleccionUsuario;
     
     private JTextField cedula;
     private JLabel nombreUsuario;
@@ -21,10 +23,12 @@ public class ControladorPrestamo {
     private prestamo prestamo;
     
     //METODO CONSTRUCTOR
-    public ControladorPrestamo(prestamo prestamo, VentanaPrestamo Vista){
+    public ControladorPrestamo(prestamo prestamo, VentanaPrestamo Vista, usuario usuario){
         this.prestamo = prestamo;
         this.Vista = Vista;
         this.coleccionPrestamo = (HashMap<String, String>) prestamo.getColeccionPrestamos();
+        this.coleccionUsuario = (HashMap<String, String>) usuario.getColeccionUsuario();
+        
         this.cedula = this.Vista.getCedula();
         this.nombreUsuario = this.Vista.getNombreUsuario();
         
@@ -44,13 +48,17 @@ public class ControladorPrestamo {
         @Override
         public void actionPerformed(ActionEvent e) {
             String cc = cedula.getText();
-            prestamo.setCedula(cc);
             
             if(e.getActionCommand().equalsIgnoreCase("BUSCAR")){
-                
+                nombreUsuario.setText(coleccionUsuario.get(cc));
                 System.out.println("cedula digitada : "+ cc);
+                System.out.println(coleccionUsuario.get(cc));
+                
+                
+                
             }
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
+                
                 System.out.println("le di agregar");
                 
                 /*AgregarPrestamo vista = new AgregarPrestamo();

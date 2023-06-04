@@ -55,6 +55,8 @@ public class ControladorAgregarRecurso {
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
                 nombreA = nombreAutor.getText();
                 nombreR = nombreRecurso.getText();
+                modelo.agregarItem(nombreR);
+                
                 tipoR = (String) tipoUsuario.getSelectedItem();
                 palabra = nombreA + " " + tipoR;
                 coleccionRecursos.put(nombreR, palabra);
