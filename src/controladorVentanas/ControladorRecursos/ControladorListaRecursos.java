@@ -23,8 +23,6 @@ public class ControladorListaRecursos {
         this.coleccionRecursos = (HashMap<String, String>) recurso.getColeccionRecurso();
         this.listaRecursos = this.Vista.getListaRecursos();
 
-        
-
         this.Vista.addbotonVisualizarListener(new CalculateListener());
         
         Vista.setVisible(true);

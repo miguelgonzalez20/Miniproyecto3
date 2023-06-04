@@ -48,9 +48,9 @@
                           <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="visualprestamo" min="-2" max="-2" attributes="0"/>
+                                  <Component id="botonVisualizar" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="principalmenu" min="-2" max="-2" attributes="0"/>
+                                  <Component id="botonMenuPrincipal" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                           </Group>
@@ -69,8 +69,8 @@
                   <Component id="jScrollPane1" min="-2" pref="196" max="-2" attributes="0"/>
                   <EmptySpace pref="30" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="visualprestamo" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="principalmenu" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonVisualizar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="botonMenuPrincipal" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
               </Group>
@@ -85,7 +85,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTextArea" name="jTextArea1">
+            <Component class="javax.swing.JTextArea" name="nombreRecursos">
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="rows" type="int" value="5"/>
@@ -101,15 +101,15 @@
             <Property name="text" type="java.lang.String" value="CONSULTAR PRESTAMO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="visualprestamo">
+        <Component class="javax.swing.JButton" name="botonVisualizar">
           <Properties>
             <Property name="text" type="java.lang.String" value="VISUALIZAR"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="visualprestamoActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonVisualizarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="principalmenu">
+        <Component class="javax.swing.JButton" name="botonMenuPrincipal">
           <Properties>
             <Property name="text" type="java.lang.String" value="MENU PRINCIPAL"/>
           </Properties>

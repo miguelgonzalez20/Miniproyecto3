@@ -2,6 +2,7 @@
 package controladorVentanas.ControladorPrestamos;
 
 import Vista.Prestamo.AgregarPrestamo;
+import Vista.Prestamo.ConsultarPrestamo;
 import Vista.Prestamo.EliminarPrestamo;
 import Vista.Prestamo.VentanaPrestamo;
 import java.awt.event.ActionEvent;
@@ -73,7 +74,10 @@ public class ControladorPrestamo {
                 
             }
             if(e.getActionCommand().equalsIgnoreCase("CONSULTAR")){
-                
+                Vista.setVisible(false);
+                ConsultarPrestamo vista = new ConsultarPrestamo();
+                recurso recursos = new recurso();
+                ControladorConsultarPrestamo controlador = new ControladorConsultarPrestamo(recursos, vista, ArrayListPrestamos1);
                 
             }
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
@@ -81,7 +85,6 @@ public class ControladorPrestamo {
                 EliminarPrestamo vista = new EliminarPrestamo();
                 recurso recursos = new recurso();
                 ControladorEliminarPrestamo controlador = new ControladorEliminarPrestamo(recursos, vista, ArrayListPrestamos1);
-
             }
             if(e.getActionCommand().equalsIgnoreCase("MODIFICAR")){
                 

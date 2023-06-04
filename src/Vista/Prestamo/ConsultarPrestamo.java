@@ -4,6 +4,9 @@
  */
 package Vista.Prestamo;
 
+import java.awt.event.ActionListener;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Usuario
@@ -28,28 +31,28 @@ public class ConsultarPrestamo extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        nombreRecursos = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
-        visualprestamo = new javax.swing.JButton();
-        principalmenu = new javax.swing.JButton();
+        botonVisualizar = new javax.swing.JButton();
+        botonMenuPrincipal = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        nombreRecursos.setColumns(20);
+        nombreRecursos.setRows(5);
+        jScrollPane1.setViewportView(nombreRecursos);
 
         jLabel1.setFont(new java.awt.Font("Arial Black", 0, 36)); // NOI18N
         jLabel1.setText("CONSULTAR PRESTAMO");
 
-        visualprestamo.setText("VISUALIZAR");
-        visualprestamo.addActionListener(new java.awt.event.ActionListener() {
+        botonVisualizar.setText("VISUALIZAR");
+        botonVisualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                visualprestamoActionPerformed(evt);
+                botonVisualizarActionPerformed(evt);
             }
         });
 
-        principalmenu.setText("MENU PRINCIPAL");
+        botonMenuPrincipal.setText("MENU PRINCIPAL");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,9 +67,9 @@ public class ConsultarPrestamo extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(visualprestamo)
+                                .addComponent(botonVisualizar)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(principalmenu))
+                                .addComponent(botonMenuPrincipal))
                             .addComponent(jLabel1))))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
@@ -79,8 +82,8 @@ public class ConsultarPrestamo extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(visualprestamo)
-                    .addComponent(principalmenu))
+                    .addComponent(botonVisualizar)
+                    .addComponent(botonMenuPrincipal))
                 .addGap(24, 24, 24))
         );
 
@@ -98,17 +101,30 @@ public class ConsultarPrestamo extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void visualprestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_visualprestamoActionPerformed
+    private void botonVisualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVisualizarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_visualprestamoActionPerformed
+    }//GEN-LAST:event_botonVisualizarActionPerformed
 
+    public void setNombreRecursos(JTextArea nombreRecursos) {
+        this.nombreRecursos = nombreRecursos;
+    }
 
+    public JTextArea getNombreRecursos() {
+        return nombreRecursos;
+    }
+    
+    public void addbotonVisualizarListener(ActionListener listenControles){
+        botonVisualizar.addActionListener(listenControles);
+    }
+    public void addbotonMenuPrincipalListener(ActionListener listenControles){
+        botonMenuPrincipal.addActionListener(listenControles);
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonMenuPrincipal;
+    private javax.swing.JButton botonVisualizar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JButton principalmenu;
-    private javax.swing.JButton visualprestamo;
+    private javax.swing.JTextArea nombreRecursos;
     // End of variables declaration//GEN-END:variables
 }

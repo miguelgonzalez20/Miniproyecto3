@@ -1,25 +1,22 @@
 
 package Vista.Prestamo;
 
-import controladorVentanas.ControladorPrestamos.ControladorAgregarPrestamo;
 import controladorVentanas.ControladorPrestamos.ControladorEliminarPrestamo;
 import controladorVentanas.ControladorPrestamos.ControladorListaPrestamo;
 import controladorVentanas.ControladorPrestamos.ControladorPrestamo;
 import java.awt.event.ActionListener;
-import javax.swing.ComboBoxModel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 
 public class VentanaPrestamo extends javax.swing.JFrame {
 
-    private ComboBoxModel<String> nombres;
+    
 
     public VentanaPrestamo() {
         initComponents();
     }
 
- 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -183,9 +180,7 @@ public class VentanaPrestamo extends javax.swing.JFrame {
 
         
     private void botonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAgregarActionPerformed
-        /*ControladorAgregarPrestamo.mostrar();
-        ControladorPrestamo.ocultar();
-        this.dispose();*/
+        
     }//GEN-LAST:event_botonAgregarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
