@@ -5,11 +5,12 @@
  */
 package Vista;
 
-import controladorVentanas.ControladorListaRecursos;
-import controladorVentanas.ControladorPrestamo;
+import Vista.Prestamo.VentanaPrestamo;
+import controladorVentanas.ControladorRecursos.ControladorListaRecursos;
+import controladorVentanas.ControladorPrestamos.ControladorPrestamo;
 import controladorVentanas.ControladorVentanaPrincipal;
-import controladorVentanas.ControladorVentanaRecurso;
-import controladorVentanas.ControladorVentanaUsuarios;
+import controladorVentanas.ControladorRecursos.ControladorVentanaRecurso;
+import controladorVentanas.ControladorUsuario.ControladorVentanaUsuarios;
 import modelo.prestamo;
 import modelo.recurso;
 import modelo.usuario;
