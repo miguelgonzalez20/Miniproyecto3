@@ -41,7 +41,7 @@ public class ControladorEliminarUsuario {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
-                JOptionPane.showMessageDialog(null, "el usuario a sido eliminado , dale click en el boton  FINALIZAR para volver a menu principal ");
+                JOptionPane.showMessageDialog(null, "El usuario ha sido eliminado, da click en el botón  FINALIZAR para volver a menú principal.");
                 cedula = ccDigitada.getText();
                 coleccionEliminarusuario.remove(cedula);
             }   

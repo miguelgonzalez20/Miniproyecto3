@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.prestamo;
 import modelo.recurso;
@@ -50,6 +51,7 @@ public class ControladorEliminarPrestamo {
         public void actionPerformed(ActionEvent e) {
             nombreRecurso = nombreRecursoDigitado.getText();   
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){
+                JOptionPane.showMessageDialog(null, "Tu prestamo ha sido eliminado, da click en el botón  FINALIZAR para volver al menú principal.");
   
                 if(coleccionRecursos.get(nombreRecurso)== null){
                     System.out.println("no existe");
