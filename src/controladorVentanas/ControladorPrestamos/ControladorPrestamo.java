@@ -4,6 +4,7 @@ package controladorVentanas.ControladorPrestamos;
 import Vista.Prestamo.AgregarPrestamo;
 import Vista.Prestamo.ConsultarPrestamo;
 import Vista.Prestamo.EliminarPrestamo;
+import Vista.Prestamo.ModificarPrestamo;
 import Vista.Prestamo.VentanaPrestamo;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -95,9 +96,15 @@ public class ControladorPrestamo {
                 ControladorEliminarPrestamo controlador = new ControladorEliminarPrestamo(recursos, vista, ArrayListPrestamos1);
             }
             if(e.getActionCommand().equalsIgnoreCase("MODIFICAR")){
-                
+                Vista.setVisible(false);
+                ModificarPrestamo vista = new ModificarPrestamo();
+                recurso recursos = new recurso();
+                prestamo prestamos = new prestamo();
+                ControladorModificarPrestamo controlador = new ControladorModificarPrestamo(recursos, prestamos, vista, cc);
+    
             }
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR PRESTAMO")){
+                ArrayListPrestamos1.add("Estado : Abierto");
                 coleccionPrestamo.put(cc,ArrayListPrestamos1);
                 
                 System.out.println("le di finalizar");

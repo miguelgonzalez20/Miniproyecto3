@@ -16,7 +16,6 @@ public class ControladorAgregarPrestamo {
     
     //ATRIBUTOS
     
-    //private HashMap<String, ArrayList<String>> coleccionPrestamos;
     private HashMap<String, String> coleccionRecursos;
     
     private JLabel nombreUsuario;
@@ -25,22 +24,18 @@ public class ControladorAgregarPrestamo {
     private prestamo prestamo;
     private recurso recursos;
    
+    private ArrayList<String> ArrayListPrestamos = new ArrayList<>(); // 
     
-    private ArrayList<String> ArrayListPrestamos = new ArrayList<>();
-
     //METODO CONSTRUCTOR
     public ControladorAgregarPrestamo(recurso recursos, AgregarPrestamo Vista, String cc, ArrayList<String> ArrayPrestamo){
-        
-        //this.prestamo = prestamo;
+
         this.Vista = Vista;
         this.recursos = recursos;
         
         this.nombreRecursoDigitado = Vista.getNombreRecurso();
-        //this.coleccionPrestamos = (HashMap<String, ArrayList<String>>) prestamo.getColeccionPrestamos();
         this.coleccionRecursos = (HashMap<String, String>) recursos.getColeccionRecurso();
         this.nombreUsuario = this.Vista.getNombreUsuario();
-        
-        
+
         this.ArrayListPrestamos = ArrayPrestamo;
         
         this.Vista.addbotonFinalizarListener(new CalculateListener());
@@ -59,10 +54,10 @@ public class ControladorAgregarPrestamo {
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
   
                 if(coleccionRecursos.get(nombreRecurso)== null){
-                    System.out.println("no existe");
+                    System.out.println("no existe"); // No existe el recurso en el map de RECURSOS
                 }
                 else{
-                    ArrayListPrestamos.add(nombreRecurso);//LUGAR DONDE DICE QUE ESTA EL ERROR
+                    ArrayListPrestamos.add(nombreRecurso);
                     ControladorPrestamo.setArrayListPrestamos(ArrayListPrestamos);
                 }
                 ControladorPrestamo.mostrar();
