@@ -40,9 +40,7 @@ public class ControladorPrestamo {
         
         this.cedula = this.Vista.getCedula();
         this.nombreUsuario = this.Vista.getNombreUsuario();
-        
-        //this.ArrayListPrestamos1 = ArrayListPrestamos;
-        
+                
         this.Vista.addbotonFinalizarListener(new CalculateListener());
         this.Vista.addbotonBuscarListener(new CalculateListener());  
         this.Vista.addbotonAgregarListener(new CalculateListener());
@@ -69,9 +67,7 @@ public class ControladorPrestamo {
             
             if(e.getActionCommand().equalsIgnoreCase("BUSCAR")){
                 nombreUsuario.setText(coleccionUsuario.get(cc));
-                System.out.println("cedula digitada : "+ cc);
-                System.out.println(coleccionUsuario.get(cc));
-  
+
             }
             if(e.getActionCommand().equalsIgnoreCase("AGREGAR")){
                 Vista.setVisible(false);
@@ -85,8 +81,8 @@ public class ControladorPrestamo {
             if(e.getActionCommand().equalsIgnoreCase("CONSULTAR")){
                 Vista.setVisible(false);
                 ConsultarPrestamo vista = new ConsultarPrestamo();
-                recurso recursos = new recurso();
-                ControladorConsultarPrestamo controlador = new ControladorConsultarPrestamo(recursos, vista, ArrayListPrestamos1);
+                prestamo prestamos = new prestamo();
+                ControladorConsultarPrestamo controlador = new ControladorConsultarPrestamo(vista, prestamos);
                 
             }
             if(e.getActionCommand().equalsIgnoreCase("ELIMINAR")){

@@ -20,7 +20,7 @@ public class prestamo {
     public String getCadenaRecursos() {
         return cadenaRecursos;
     }
-
+    
     public void setCadenaRecursos(String cadenaRecursos) {
         this.cadenaRecursos = cadenaRecursos;
     }

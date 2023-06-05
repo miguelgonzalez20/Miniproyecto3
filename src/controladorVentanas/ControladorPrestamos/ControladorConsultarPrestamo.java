@@ -6,7 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import javax.swing.JTextArea;
+import modelo.prestamo;
 import modelo.recurso;
 
 public class ControladorConsultarPrestamo {
@@ -14,24 +16,22 @@ public class ControladorConsultarPrestamo {
     //ATRIBUTOS
 
     private static ConsultarPrestamo Vista;
-    private recurso recursos;
+    private prestamo prestamos;
     
     private JTextArea nombreRecursos;
     
-    private HashMap<String, String> coleccionRecursos;
-    
-    private ArrayList<String> ArrayListPrestamos = new ArrayList<>();
+    private HashMap<String, ArrayList<String>> coleccionPrestamos;
 
     //METODO CONSTRUCTOR
-    public ControladorConsultarPrestamo(recurso recursos, ConsultarPrestamo Vista, ArrayList<String> ArrayPrestamo){
+    public ControladorConsultarPrestamo(ConsultarPrestamo Vista, prestamo prestamos){
         
         this.Vista = Vista;
-        this.recursos = recursos;
-        this.nombreRecursos = this.Vista.getNombreRecursos();
-        this.coleccionRecursos = (HashMap<String, String>) recursos.getColeccionRecurso();
-
-        this.ArrayListPrestamos = ArrayPrestamo;
+        this.prestamos = prestamos;
         
+        this.nombreRecursos = this.Vista.getNombreRecursos();
+        
+        this.coleccionPrestamos = (HashMap<String, ArrayList<String>>) prestamo.getColeccionPrestamos();
+
         this.Vista.addbotonVisualizarListener(new CalculateListener());
         this.Vista.addbotonMenuPrincipalListener(new CalculateListener());
         
@@ -41,22 +41,22 @@ public class ControladorConsultarPrestamo {
     
     class CalculateListener implements ActionListener{
          String RecursosMostrar;
-         
+         String palabra;
         @Override
         public void actionPerformed(ActionEvent e) {
              
             if(e.getActionCommand().equalsIgnoreCase("VISUALIZAR")){
                 StringBuilder stringBuilder = new StringBuilder();
                 
-                for (int i = 0; i < ArrayListPrestamos.size(); i++) {
-                    
-                    String elemento = ArrayListPrestamos.get(i);
-                    stringBuilder.append(elemento);
-                    stringBuilder.append("\n");
+                for (Map.Entry<String, ArrayList<String>> entry : coleccionPrestamos.entrySet()) {
+                    String clave = entry.getKey();
+                    ArrayList<String> valor = entry.getValue();
+                    palabra = "Cedula Usuario: " + clave + "  /  " + valor + "\n";
+                    stringBuilder.append(palabra);
                 }
                 RecursosMostrar = stringBuilder.toString();
                 nombreRecursos.setText(RecursosMostrar);
-                //Vista.setNombreRecursos(nombreRecursos);     
+
             }
             if(e.getActionCommand().equalsIgnoreCase("MENU PRINCIPAL")){
                 ControladorPrestamo.mostrar();
