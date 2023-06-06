@@ -90,7 +90,7 @@ public class ControladorModificarPrestamo {
             }
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
                 ArrayRecursosPrestamo = coleccionPrestamos.get(cedula);
-                int lastIndex = ArrayRecursosPrestamo.size() - 1;
+                int lastIndex = ArrayRecursosPrestamo.size() -1;
                 ArrayRecursosPrestamo.remove(lastIndex); // Tenemos nuestro array List sin el "ESTADO"
                 
                 ArrayRecursosEntregados = coleccionRecursosDevueltos.get(cedula); // Tenemos los 2 arrays para comparar
