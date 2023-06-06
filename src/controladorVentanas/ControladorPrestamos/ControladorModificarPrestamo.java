@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.TreeMap;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import modelo.prestamo;
 import modelo.recurso;
@@ -52,6 +53,13 @@ public class ControladorModificarPrestamo {
         
         Vista.setVisible(true);
         Vista.setLocationRelativeTo(null);
+        JOptionPane.showMessageDialog(null, 
+"EN ESTA PARTE VAS A PODER TANTO DEVOLVER TUS RECURSOS PRESTADOS COMO VISUALIZAR\n" +
+"LA LISTA DE LOS PRESTAMOS JUNTO CON SU ESTADO \n"+
+"LO PRIMERO ES DARLE EN VISUALIZAR, PARA VER LOS RECURSOS QUE SE TE PRESTARON \n"+
+"LUEGO VAS A ESCRIBIR EL NOMBRE DEL RECURSO QUE DESEAS DEVOLVER, DESPUES DE ESCRIBIRLO, \n" +
+"SE OPRIME EL BOTON ENTREGAR, EN CASO DE QUERER ENTREGAR VARIOS RECURSOS, TIENE QUE REPETIR\n" +
+"EL PROCESO, FINALMENTE OPRIME EL BOTON FINALIZAR\n");
     }
     
     class CalculateListener implements ActionListener{
@@ -76,6 +84,9 @@ public class ControladorModificarPrestamo {
                 //ArrayRecursosEntregados = coleccionRecursosDevueltos.get(cedula);
                 ArrayRecursosEntregados.add(txtRecursos_A_Entregar.getText()); //Agrego lo digitado
                 coleccionRecursosDevueltos.put(cedula, ArrayRecursosEntregados); // y lo pongo en mi treemap
+                txtRecursos_A_Entregar.setText("");
+                JOptionPane.showMessageDialog(null, "RECURSO ENTREGADO, SI QUIERE ENTREGAR OTRO RECURSO REPITA EL PROCESO.");
+         
             }
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR")){
                 ArrayRecursosPrestamo = coleccionPrestamos.get(cedula);

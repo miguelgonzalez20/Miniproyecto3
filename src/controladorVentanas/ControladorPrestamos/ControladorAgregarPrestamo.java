@@ -34,7 +34,7 @@ public class ControladorAgregarPrestamo {
         
         this.nombreRecursoDigitado = Vista.getNombreRecurso();
         this.coleccionRecursos = (HashMap<String, String>) recursos.getColeccionRecurso();
-        this.nombreUsuario = this.Vista.getNombreUsuario();
+        
 
         this.ArrayListPrestamos = ArrayPrestamo;
         
