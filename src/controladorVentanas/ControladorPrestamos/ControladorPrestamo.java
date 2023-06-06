@@ -6,6 +6,7 @@ import Vista.Prestamo.ConsultarPrestamo;
 import Vista.Prestamo.EliminarPrestamo;
 import Vista.Prestamo.ModificarPrestamo;
 import Vista.Prestamo.VentanaPrestamo;
+import controladorVentanas.ControladorVentanaPrincipal;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -102,7 +103,8 @@ public class ControladorPrestamo {
             if(e.getActionCommand().equalsIgnoreCase("FINALIZAR PRESTAMO")){
                 ArrayListPrestamos1.add("Estado : Abierto");
                 coleccionPrestamo.put(cc,ArrayListPrestamos1);
-                
+                ControladorVentanaPrincipal.mostrar();
+                Vista.setVisible(false);
                 System.out.println("le di finalizar");
                 System.out.println(coleccionPrestamo.get(cc));
                 

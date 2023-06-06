@@ -184,13 +184,11 @@ public class VentanaPrestamo extends javax.swing.JFrame {
     }//GEN-LAST:event_botonAgregarActionPerformed
 
     private void botonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEliminarActionPerformed
-        ControladorEliminarPrestamo.mostrar();
-        ControladorPrestamo.ocultar();
+        
     }//GEN-LAST:event_botonEliminarActionPerformed
 
     private void botonModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonModificarActionPerformed
-        ControladorListaPrestamo.mostrar();
-        ControladorPrestamo.ocultar();
+        
     }//GEN-LAST:event_botonModificarActionPerformed
 
     private void botonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonConsultarActionPerformed
