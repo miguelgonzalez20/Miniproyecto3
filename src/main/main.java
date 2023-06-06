@@ -1,7 +1,14 @@
-/*NOMPRE DE PARTICIPANTES :Miguel Gonzales , Ana Mezu ,Vanesa Chavez . 
-PROFESOR: Luis Romo.
-GRUPO DE FPOE:01.
-MINI PROYECTO 3.*/
+
+/*
+MiniProyecto 3
+
+INTEGRANTES DEL GRUPO : 
+- Miguel Angel Gonzalez Castrillon 2227203
+- Ana Sofía Mezu Vargas 2225958  
+- Vanesa Chavez 2041700
+CURSO FPOE GRUPO 01
+PROFESOR : LUIS YOVANY ROMO PORTILLA
+*/
 package main;
 
 import controladorVentanas.ControladorVentanaPrincipal;
